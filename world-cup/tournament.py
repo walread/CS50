@@ -24,7 +24,7 @@ def main():
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
-    for winner in range(N):
+    for wins in range(N):
         winner = simulate_tournamnet(teams)
         if winner in counts:
 
