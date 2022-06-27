@@ -1,6 +1,7 @@
 def main():
     height = get_height()
     for i in range(height):
+        for j in range(height)
         print("#")
 
 def get_height():
@@ -10,7 +11,7 @@ def get_height():
             if n > 0 and n < 9:
                 break
         except ValueError:
-            print("That is not an integer between 1 and 8!")
+            print("That is not an integer!")
     return n
 
 main()
