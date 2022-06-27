@@ -1,11 +1,12 @@
+# main function
 def main():
     n = get_height()
     for i in range(n):
-        for j in range(n):
+        for (j + 1) in range(n):
             print("#", end="")
         print()
 
-
+# height input function
 def get_height():
     while True:
         try:
