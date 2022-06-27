@@ -1,2 +1,5 @@
+# get input
 answer = input("What's your name? ")
-print(f"hello, {})
+
+# print 
+print(f"hello, {answer}")
