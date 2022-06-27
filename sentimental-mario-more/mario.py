@@ -1,8 +1,10 @@
 def main():
-    height = get_height()
-    for i in range(height):
-        for j in range(height)
-        print("#")
+    n = get_height()
+    for i in range(n):
+        for j in range(n):
+            print("#", end="")
+        print()
+
 
 def get_height():
     while True:
@@ -14,4 +16,5 @@ def get_height():
             print("That is not an integer!")
     return n
 
+# call main
 main()
