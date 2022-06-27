@@ -6,4 +6,6 @@ if (n):
 elif (n):
     print("MASTERCARD")
 elif (n):
-    
+    print("VISA")
+else:
+    print("INVALID") 
