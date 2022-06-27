@@ -1,6 +1,7 @@
-import get_int from cs50
+from cs50 import get_string
 
-n = get_int("Number: ")
+s = get_string("Number: ")
+n = int(s)
 if (n):
     print("AMEX")
 elif (n):
@@ -8,4 +9,4 @@ elif (n):
 elif (n):
     print("VISA")
 else:
-    print("INVALID") 
+    print("INVALID")
