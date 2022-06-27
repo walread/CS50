@@ -2,7 +2,7 @@
 def main():
     n = get_height()
     for i in range(n):
-        for j in range(1:n):
+        for j in [n, -1]:
             print("#", end="")
         print()
 
