@@ -2,14 +2,15 @@
 def main():
     n = get_height()
     for i in range(n):
-        for j in range(i + 1):
+        for j in range(n - i - 1):
             print(" ", end="")
         for k in range(i + 1):
             print("#", end="")
-        print(" ", end="")
+        print("  ", end="")
         for l in range(i + 1):
             print("#", end="")
         print()
+
 
 # height input function
 def get_height():
@@ -21,6 +22,7 @@ def get_height():
         except ValueError:
             print("That is not an integer!")
     return n
+
 
 # call main
 main()
