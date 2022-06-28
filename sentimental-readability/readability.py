@@ -3,7 +3,8 @@ from cs50 import get_string
 
 # get text input
 t = get_string("Text: ")
-
+print(t[2])
+print(int(t[2]))
 
 
 #calculate grade level
