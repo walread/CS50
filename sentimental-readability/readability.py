@@ -24,11 +24,10 @@ s = 0
 for k in range(len(t)):
     if (ord(t[k]) == 46 or ord(t[k]) == 33 or ord(t[k]) == 63):
         s += 1
-print(s)
 
 # calculate grade level
-L = 0
-S = 0
+L = l / w * 100
+S = s / w * 100
 n = (0.0588 * L) - (0.296 * S) - 15.8
 n = round(n)
 
