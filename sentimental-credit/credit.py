@@ -3,4 +3,5 @@ from cs50 import get_string
 s = get_string("Number: ")
 if (int(s[0]) == 3):
     if (int(s[1]) == 4 or int(s[1]) == 7):
-        print("AMEX")
+        if (len(s) == 15):
+            print("AMEX")
