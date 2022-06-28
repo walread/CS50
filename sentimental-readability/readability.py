@@ -2,11 +2,13 @@ from cs50 import get_string
 
 
 # get text input
-s = get_string("Text: ")
+t = get_string("Text: ")
 
 
 #calculate grade level
-n = (0.0588 * L)
+L = len(t)
+S =
+n = (0.0588 * L) - (0.296 * S) - 15.8
 n = round(n)
 
 
