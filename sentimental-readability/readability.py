@@ -5,7 +5,7 @@ from cs50 import get_string
 t = get_string("Text: ")
 
 
-#calculate letters
+# calculate letters
 l = 0
 for i in range(len(t)):
     if ((ord(t[i]) > 64 and ord(t[i]) < 91) or (ord(t[i]) > 96 and ord(t[i]) < 123)):
