@@ -21,8 +21,8 @@ for j in range(len(t)):
 
 # calculate sentences
 s = 0
-for i in range(len(t)):
-    if ((ord(t[i]) > 64 and ord(t[i]) < 91) or (ord(t[i]) > 96 and ord(t[i]) < 123)):
+for k in range(len(t)):
+    if (ord(t[k]) > 64 and ord(t[k]) < 91 or (ord(t[i]) > 96 and ord(t[i]) < 123)):
         l += 1
 
 
