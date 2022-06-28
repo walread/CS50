@@ -23,6 +23,8 @@ def main():
             sequence.append(row)
 
     # TODO: Find longest match of each STR in DNA sequence/
+    results = database
+    for i in 
 
     # TODO: Check database for matching profiles
 
