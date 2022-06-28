@@ -3,13 +3,14 @@ from cs50 import get_string
 
 # get text input
 t = get_string("Text: ")
-print(t[2])
-print(ord(t[2]))
 
 
 #calculate grade level
+l = 0
 for i in range(len(t)):
-    if ((ord(t[i]) > 64 and ord(t[i]) < 91) or (ord(t[i]) > 96 and ord(t[i]) > 65))
+    if ((ord(t[i]) > 64 and ord(t[i]) < 91) or (ord(t[i]) > 96 and ord(t[i]) < 123)):
+        l +=
+print(l)
 
 L = 0
 S = 0
