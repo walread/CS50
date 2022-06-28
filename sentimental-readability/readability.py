@@ -5,13 +5,20 @@ from cs50 import get_string
 t = get_string("Text: ")
 
 
-#calculate grade level
+#calculate letters
 l = 0
 for i in range(len(t)):
     if ((ord(t[i]) > 64 and ord(t[i]) < 91) or (ord(t[i]) > 96 and ord(t[i]) < 123)):
-        l +=
-print(l)
+        l += 1
 
+
+# calculate words
+
+
+# calculate sentences
+
+
+# calculate grade level
 L = 0
 S = 0
 n = (0.0588 * L) - (0.296 * S) - 15.8
