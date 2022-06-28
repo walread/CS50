@@ -21,7 +21,6 @@ def main():
         reader = csv.reader(Sequence)
         for row in reader:
             sequence.append(row)
-    print(sequence) 
 
     # TODO: Find longest match of each STR in DNA sequence
 
