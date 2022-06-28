@@ -4,12 +4,12 @@ from cs50 import get_string
 # get text input
 t = get_string("Text: ")
 print(t[2])
-print(int(t[2]))
+print(ord(t[2]))
 
 
 #calculate grade level
 for i in range(len(t)):
-    if (t[i] == )
+    if (ordt[i] == )
 
 L = 0
 S = 0
