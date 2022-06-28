@@ -9,7 +9,7 @@ print(ord(t[2]))
 
 #calculate grade level
 for i in range(len(t)):
-    if (ord(t[i]) > 65  )
+    if (ord(t[i]) > 64 and ord(t[i]) > 65 and ord(t[i]) > 65 and ord(t[i]) > 65)
 
 L = 0
 S = 0
