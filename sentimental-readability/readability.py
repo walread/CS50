@@ -28,7 +28,7 @@ for k in range(len(t)):
 # calculate grade level
 L = float(l) / float(w) * 100
 S = float(s) / float(w) * 100
-n = (0.0588 * float(L)) - (0.296 * float(S) - 15.8
+n = (0.0588 * float(L)) - (0.296 * float(S)) - 15.8
 n = round(n)
 
 
