@@ -13,7 +13,7 @@ for i in range(len(t)):
 
 
 # calculate words
-w = 0
+w = 1
 for j in range(len(t)):
     if (ord(t[j]) == 32):
         w += 1
@@ -26,10 +26,10 @@ for k in range(len(t)):
         s += 1
 
 # calculate grade level
-L = float(l) / float(w) * 100
-S = float(s) / float(w) * 100
-n = (0.0588 * float(L)) - (0.296 * float(S)) - 15.8
-n = round(float(n))
+L = l / w * 100
+S = s / w * 100
+n = (0.0588 * L) - (0.296 * S) - 15.8
+n = round(n)
 
 
 # print grade level
