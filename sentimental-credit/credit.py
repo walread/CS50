@@ -5,3 +5,10 @@ if (int(s[0]) == 3):
     if (int(s[1]) == 4 or int(s[1]) == 7):
         if (len(s) == 15):
             print("AMEX")
+elif (int(s[0]) == 3):
+    if (int(s[1]) == 4 or int(s[1]) == 7):
+        if (len(s) == 16):
+            print("MASTERCARD")
+elif (int(s[0]) == 4):
+    if (len(s) == 13 or len(s) == 16):
+        print("VISA")
