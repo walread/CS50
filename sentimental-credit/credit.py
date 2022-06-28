@@ -2,8 +2,8 @@ from cs50 import get_string
 
 s = get_string("Number: ")
 n = int(s)
-if (s[0] == 3 and (s[1] == 4 or s[1] == 7)):
-    print("AMEX")
+if (s[0] == 3):
+        print("AMEX")
 elif (n):
     print("MASTERCARD")
 elif (n):
