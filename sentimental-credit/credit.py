@@ -13,4 +13,4 @@ elif (int(s[0]) == 4):
     if (len(s) == 13 or len(s) == 16):
         print("VISA")
 else:
-    print(")
+    print("INVALID")
