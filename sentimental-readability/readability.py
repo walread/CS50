@@ -22,7 +22,7 @@ for j in range(len(t)):
 # calculate sentences
 s = 0
 for k in range(len(t)):
-    if (ord(t[k]) == 46 or ord(t[k]) == 33 or ord(t[i]) == 63):
+    if (ord(t[k]) == 46 or ord(t[k]) == 33 or ord(t[k]) == 63):
         s += 1
 print(s)
 
