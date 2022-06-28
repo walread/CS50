@@ -6,7 +6,8 @@ s = get_string("Text: ")
 
 
 #calculate grade level
-n = 2.6
+n = (0.0588 * L)
+n = round(n)
 
 
 # print grade level
