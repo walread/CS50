@@ -31,7 +31,7 @@ def main():
     results = []
     for i in keys:
         results[i] = longest_match(sys.argv[2], keys[i + 1])
-    p
+    print(results) 
 
     # TODO: Check database for matching profiles
 
