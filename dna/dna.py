@@ -29,10 +29,14 @@ def main():
     print(keys)
     print(len(keys) - 1)
     print(keys[0 + 1])
+    print((sequence[0]))
+    s = sequence[0]
+    print(s[0])
+    print(longest_match(s[0], keys[2]))
 
     results = []
     for i in range(len(keys) - 1):
-        results[i] = longest_match(sys.argv[2], keys[i + 1])
+        results.append(longest_match(s[0], keys[i + 1]))
     print(results)
 
     # TODO: Check database for matching profiles
