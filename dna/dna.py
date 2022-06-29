@@ -44,8 +44,8 @@ def main():
     print(len(database))
     print(len(database[0]))
     d = database[0]
-    print(d[0])
 
+    
 
     return
 
