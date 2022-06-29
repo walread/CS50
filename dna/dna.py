@@ -24,7 +24,7 @@ def main():
 
     # TODO: Find longest match of each STR in DNA sequence/
     keys = []
-    for key in database.keys():
+    for key in database[0].keys():
         list.append(key)
     print(keys)
 
