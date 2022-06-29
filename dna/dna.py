@@ -28,6 +28,7 @@ def main():
         keys.append(key)
     print(keys)
     print(len(keys) - 1)
+    print(keys[0 + 1])
 
     results = []
     for i in range(len(keys) - 1):
