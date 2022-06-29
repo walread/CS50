@@ -32,7 +32,7 @@ def main():
     print((sequence[0]))
     s = sequence[0]
     print(s[0])
-    print(longest_match(s[0], keys[2]))
+    print(longest_match(s[0], keys[1]))
 
     results = []
     for i in range(len(keys) - 1):
@@ -40,6 +40,7 @@ def main():
     print(results)
 
     # TODO: Check database for matching profiles
+    for i in 
 
     return
 
