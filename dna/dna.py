@@ -33,7 +33,7 @@ def main():
     s = sequence[0]
     print(s[0])
     print(longest_match(s[0], keys[1]))
-    print()
+    print(database[0])
 
     results = []
     for i in range(len(keys) - 1):
