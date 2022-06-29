@@ -27,11 +27,12 @@ def main():
     for key in database[0].keys():
         keys.append(key)
     print(keys)
+    print(len(keys) - 1)
 
     results = []
-    for i in keys:
+    for i in range(len(keys) - 1):
         results[i] = longest_match(sys.argv[2], keys[i + 1])
-    print(results) 
+    print(results)
 
     # TODO: Check database for matching profiles
 
