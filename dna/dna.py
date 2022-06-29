@@ -39,13 +39,12 @@ def main():
         results.append(longest_match(s[0], keys[i + 1]))
     print(results)
 
+    # TODO: Check database for matching profiles
     print(database[0])
     print(len(database))
     print(len(database[0]))
-
-    # TODO: Check database for matching profiles
     d = database[0]
-    print
+    print(d[0])
 
 
     return
