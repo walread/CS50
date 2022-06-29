@@ -23,9 +23,9 @@ def main():
             sequence.append(row)
 
     # TODO: Find longest match of each STR in DNA sequence/
-
-    results = (database[0].keys())
-    print(results[0])
+    keys = []
+    for key in database.keys()
+        list
 
     # TODO: Check database for matching profiles
 
