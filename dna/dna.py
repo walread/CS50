@@ -41,8 +41,7 @@ def main():
     print(results)
 
     # TODO: Check database for matching profiles
-    for i in database:
-        if ()
+    for i 
 
     return
 
