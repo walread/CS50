@@ -26,27 +26,27 @@ def main():
     keys = []
     for key in database[0].keys():
         keys.append(key)
-    print(keys)
-    print(len(keys) - 1)
-    print(keys[0 + 1])
-    print((sequence[0]))
     s = sequence[0]
-    print(s[0])
-    print(longest_match(s[0], keys[1]))
 
     results = []
     for i in range(len(keys) - 1):
         results.append(longest_match(s[0], keys[i + 1]))
-    print(results)
 
     # TODO: Check database for matching profiles
     print(database[0])
     print(len(database))
     print(len(database[0]))
-    d = database[0]
+    d = list(dict.values(database[0]))
+    print(d)
+    print(d[1:])
+    print(results)
 
-    for key in database:
-        print(key)
+    for i in range(len(database)):
+        d = list(dict.values(database[i]))
+        if (d[1:] == results):
+            print(d[0])
+        else:
+            print("No match")
 
     return
 
