@@ -31,13 +31,16 @@ def main():
     results = []
     for i in range(len(keys) - 1):
         results.append(longest_match(s[0], keys[i + 1]))
+    for j in range(len(results)):
+        results[j] = str(results[j])
 
     # TODO: Check database for matching profiles
     for i in range(len(database)):
         d = list(dict.values(database[i]))
-        print(d[1:])
-        print(results)
-
+        if (d[1:] == results):
+            print(d[0])
+            return
+    
     return
 
 
