@@ -45,7 +45,8 @@ def main():
     print(len(database[0]))
     d = database[0]
 
-    
+    for key in database:
+        print(key)
 
     return
 
