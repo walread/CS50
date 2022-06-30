@@ -33,14 +33,6 @@ def main():
         results.append(longest_match(s[0], keys[i + 1]))
 
     # TODO: Check database for matching profiles
-    print(database[0])
-    print(len(database))
-    print(len(database[0]))
-    d = list(dict.values(database[0]))
-    print(d)
-    print(d[1:])
-    print(results)
-
     for i in range(len(database)):
         d = list(dict.values(database[i]))
         if (d[1:] == results):
