@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: Takes roughly on the order of n^2 time to sort the random and reversed list (big O) while only taking roughly n time to sort the already sorted list (omega). Also, was the slowest sort time for random and reversed list while having a middle sort time for the already sorted list.
+
+sort2 uses: merge sort
+
+How do you know?: Had that fastest sort times for all three lists, roughly on the order of n log n (theta).
+
+sort3 uses: selection sort
+
+How do you know?: Takes the same amount of time whether the numbers are already sorted or not, although not the fastest sort times. Roughly on the order of n^2 (theta).
