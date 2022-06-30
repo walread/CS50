@@ -35,10 +35,8 @@ def main():
     # TODO: Check database for matching profiles
     for i in range(len(database)):
         d = list(dict.values(database[i]))
-        if (d[1:] == results):
-            print(d[0])
-        else:
-            print("No match")
+        print(d[1:])
+        print(results)
 
     return
 
