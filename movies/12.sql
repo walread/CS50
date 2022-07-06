@@ -17,4 +17,3 @@ WHERE id IN
         (SELECT id
          FROM people
          WHERE name = 'Helena Bonham Carter'));
-         
