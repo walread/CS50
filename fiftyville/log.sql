@@ -4,4 +4,4 @@ SELECT *
 FROM crime_scene_reports
 WHERE street = 'Humphrey Street'
 AND day = 28;
--- Crime id of interest is 295.
+-- Crime of interest is id 295.
