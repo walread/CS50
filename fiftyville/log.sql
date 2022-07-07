@@ -20,7 +20,9 @@ AND day = 28;
 SELECT *
 FROM bakery_security_logs
 WHERE month = 7
-AND day = 28;
+AND day = 28
+AND hour = 10
+AND minute < 25;
 
 -- Check ATM record.
 SELECT *
@@ -55,19 +57,19 @@ WHERE month = 7
 AND day = 29;
 -- Flight id = 36 to airport id 4.
 
--- Check airport id.
-SELECT *
-FROM airports
-Where id = 4;
--- Distination is NYC.
-
 -- Check passengers.
 SELECT *
 FROM passengers
 WHERE flight_id = 36;
 
--- Indentify person.
-SELECT *
+-- Identify the city.
+SELECT city
+FROM airports
+Where id = 4;
+-- New York City.
+
+-- Indentify the theif.
+SELECT name
 FROM people
 WHERE id IN
     (SELECT person_id
@@ -86,10 +88,25 @@ AND license_plate IN
     (SELECT license_plate
     FROM bakery_security_logs
     WHERE month = 7
-    AND day = 28)
+    AND day = 28
+    AND hour = 10
+    AND minute < 25)
 AND phone_number IN
     (SELECT caller
     FROM phone_calls
     WHERE month = 7
     AND day = 28
     AND duration < 60);
+-- Bruce is the Theif.
+
+-- Identify the accomplice.
+SELECT name
+FROM people
+WHERE phone_number IN
+    (SELECT receiver
+    FROM phone_calls
+    WHERE month = 7
+    AND day = 28
+    AND duration < 60
+    AND caller = '(367) 555-5533');
+-- Robin is the accomlice.
