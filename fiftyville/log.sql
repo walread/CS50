@@ -41,6 +41,17 @@ SELECT *
 FROM flights
 WHERE month = 7
 AND day = 29;
--- Flight id = 36. 
+-- Flight id = 36 to airport id 4.
+
+-- Check airport id.
+SELECT *
+FROM airports
+Where id = 4;
+-- Distination is NYC.
+
+-- Check passengers.
+SELECT *
+FROM passengers
+WHERE flight_id = 36;
 
 -- Check credit card purchases.
