@@ -29,6 +29,16 @@ WHERE month = 7
 AND day = 28
 AND atm_location = 'Leggett Street';
 
+-- Bank accounts.
+SELECT *
+FROM bank_accounts
+WHERE account_number IN
+(SELECT *
+FROM atm_transactions
+WHERE month = 7
+AND day = 28
+AND atm_location = 'Leggett Street');
+
 -- Check phone records.
 SELECT *
 FROM phone_calls
