@@ -30,6 +30,11 @@ AND day = 28
 AND atm_location = 'Leggett Street';
 
 -- Check phone records.
+SELECT *
+FROM phone_calls
+WHERE month = 7
+AND day = 28
+AND duration < 60;
 
 -- Check flights.
 
