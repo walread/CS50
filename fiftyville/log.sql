@@ -21,9 +21,13 @@ SELECT *
 FROM bakery_security_logs
 WHERE month = 7
 AND day = 28;
--- License plate # is
 
 -- Check ATM record.
+SELECT *
+FROM atm_transactions
+WHERE month = 7
+AND day = 28;
+AND atm_location = 'Legget Street';
 
 -- Check phone records.
 
