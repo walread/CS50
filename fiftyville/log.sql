@@ -26,8 +26,8 @@ AND day = 28;
 SELECT *
 FROM atm_transactions
 WHERE month = 7
-AND day = 28;
-AND atm_location = 'Legget Street';
+AND day = 28
+AND atm_location = 'Leggett Street';
 
 -- Check phone records.
 
