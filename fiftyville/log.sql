@@ -13,7 +13,7 @@ FROM interviews
 WHERE month = 7
 AND day = 28;
 -- 161: Left within 10min of theft.
--- 162: Earlier that morning say theif getting money from ATM on Leggett Street.
+-- 162: Earlier that morning theif withdrawing money from ATM on Leggett Street.
 -- 163: As theif left bakery they called someone and talked for less than a minute. Planned to take the earliest flight out tomorrow. Asked person on phone to purchase flight.
 
 -- Identify license plate #.
