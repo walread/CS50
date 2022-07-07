@@ -37,5 +37,10 @@ AND day = 28
 AND duration < 60;
 
 -- Check flights.
+SELECT *
+FROM flights
+WHERE month = 7
+AND day = 29;
+-
 
 -- Check credit card purchases.
