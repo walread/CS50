@@ -28,16 +28,18 @@ FROM atm_transactions
 WHERE month = 7
 AND day = 28
 AND atm_location = 'Leggett Street';
+-- Use account_number to find person_id
 
 -- Bank accounts.
 SELECT *
 FROM bank_accounts
 WHERE account_number IN
-(SELECT *
+(SELECT account_number
 FROM atm_transactions
 WHERE month = 7
 AND day = 28
 AND atm_location = 'Leggett Street');
+-- Use person id.
 
 -- Check phone records.
 SELECT *
