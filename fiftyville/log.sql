@@ -5,10 +5,12 @@ SELECT *
 FROM crime_scene_reports
 WHERE street = 'Humphrey Street'
 AND day = 28;
--- id = 295
+-- Id = 295. Took place at 10:15am. Three interviews conducted.
 
--- look at interviews
+-- Identify license plate #.
 SELECT *
 FROM bakery_security_logs
 WHERE id = 295;
--- license plate is IH61G08, but day is 29th rather than 28th...
+-- license plate # is 
+
+-- Look at interviews.
