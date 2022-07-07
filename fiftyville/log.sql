@@ -53,5 +53,3 @@ Where id = 4;
 SELECT *
 FROM passengers
 WHERE flight_id = 36;
-
--- Check credit card purchases.
