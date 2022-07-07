@@ -4,4 +4,9 @@ SELECT *
 FROM crime_scene_reports
 WHERE street = 'Humphrey Street'
 AND day = 28;
--- Crime of interest is id 295.
+-- crime of interest is id 295
+
+SELECT *
+FROM bakery_security_logs
+WHERE id = 295;
+-- license plate is IH61G08
