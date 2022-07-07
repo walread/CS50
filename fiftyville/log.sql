@@ -41,6 +41,6 @@ SELECT *
 FROM flights
 WHERE month = 7
 AND day = 29;
--
+-- Flight id = 36. 
 
 -- Check credit card purchases.
