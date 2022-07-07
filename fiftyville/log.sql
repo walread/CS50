@@ -65,3 +65,20 @@ Where id = 4;
 SELECT *
 FROM passengers
 WHERE flight_id = 36;
+
+-- Indentify person.
+SELECT *
+FROM people
+WHERE id IN
+    (SELECT person_id
+    FROM bank_accounts
+    WHERE account_number IN
+        (SELECT account_number
+        FROM atm_transactions
+        WHERE month = 7
+        AND day = 28
+        AND atm_location = 'Leggett Street'))
+AND passport_number IN
+    (SELECT passport_number
+    FROM passengers
+    WHERE flight_id = 36);
