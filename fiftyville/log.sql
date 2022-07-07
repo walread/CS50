@@ -9,4 +9,4 @@ AND day = 28;
 SELECT *
 FROM bakery_security_logs
 WHERE id = 295;
--- license plate is IH61G08
+-- license plate is IH61G08, but day is 29th rather than 28th... 
