@@ -75,13 +75,15 @@
                     let check = document.querySelector('#check');
                     let status2 = document.querySelector('#status2');
                     document.querySelector('#check').addEventListener('click', function() {
-                        if (a2 == "TJ")
+                        if (a2 == "T")
                         {
                             check.style.backgroundColor = 'green';
+                            status2.innerHTML = "Correct";
                         }
                         else
                         {
                             check.style.backgroundColor = 'red';
+                            status2.innerHTML = "Incorrect";
                         }
                     });
                 </script>
