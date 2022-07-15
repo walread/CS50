@@ -77,8 +77,12 @@
                     let check = document.querySelector('#check');
                     let status2 = document.querySelector('#status2');
                     document.querySelector('form').addEventListener('submit', function(e) {
-                        
-                    })
+                        if (a2 == "Thomas Jefferson")
+                        {
+                            check.style.backgroundColor = 'red';
+                            e.preventDefault();
+                        }
+                    });
                 </script>
             </div>
         </div>
