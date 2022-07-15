@@ -7,14 +7,6 @@
         <title>Trivia!</title>
         <script>
             // TODO: Add code to check answers to questions
-            function ()
-            {
-                let a2 = document.querySelector('#a2').value;
-                if (a2 = "Thomas Jefferson")
-                {
-
-                }
-            }
         </script>
     </head>
     <body>
@@ -39,8 +31,14 @@
                 <hr>
                 <!-- TODO: Add free response question here -->
                 <h3>Who wrote the Declaration of Independence?</h3>
-                <input autocomplete="off" id="a2" placeholder="Answer" type="text">
-                <button type="button">Check Answer</button>
+                <form>
+                    <input autocomplete="off" id="a2" placeholder="Answer" type="text">
+                    <button type="button">Check Answer</button>
+                </form>
+                <script>
+                    document.querySelector('form').addEventListener("button", function(e))
+                    
+                </script>
             </div>
         </div>
     </body>
