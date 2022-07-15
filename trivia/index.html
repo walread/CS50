@@ -20,14 +20,26 @@
                 <hr>
                 <!-- TODO: Add multiple choice question here -->
                 <h3>In what year did the United States gain its independence from Great Britain?</h3>
-                <button class="incorrect">1754</button>
-                <button class="incorrect">1801</button>
-                <button class="correct">1776</button>
-                <button class="incorrect">1793</button>
+                <button id="a">1754</button>
+                <button id="b">1801</button>
+                <button id="c">1776</button>
+                <button id="d">1793</button>
                 <script>
-                    let correct = document.querySelector('#correct');
-                    correct.addEventListener('click', function() {
-                        correct.style.backgroundColor = 'red';
+                    let a = document.querySelector('#a');
+                    document.querySelector('#a').addEventListener('click', function() {
+                        a.style.backgroundColor = 'red';
+                    });
+                    let b = document.querySelector('#b');
+                    document.querySelector('#b').addEventListener('click', function() {
+                        b.style.backgroundColor = 'red';
+                    });
+                    let c = document.querySelector('#c');
+                    document.querySelector('#c').addEventListener('click', function() {
+                        c.style.backgroundColor = 'green';
+                    });
+                    let d = document.querySelector('#d');
+                    document.querySelector('#d').addEventListener('click', function() {
+                        d.style.backgroundColor = 'red';
                     });
                 </script>
             </div>
