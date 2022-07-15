@@ -40,10 +40,10 @@
                 <h3>Who wrote the Declaration of Independence?</h3>
                 <form>
                     <input autocomplete="off" id="a2" placeholder="Answer" type="text">
-                    <button id="button">Check Answer</button>
+                    <button id="check">Check Answer</button>
                 </form>
                 <script>
-                    document.querySelector('form').addEventListener("button", function(e)
+                    document.querySelector('form').addEventListener("check", function(e)
                     {
                         let a2 = document.querySelector('#a2').value;
                         if (a2 == "Thomas Jefferson")
