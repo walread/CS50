@@ -20,10 +20,17 @@
                 <hr>
                 <!-- TODO: Add multiple choice question here -->
                 <h3>In what year did the United States gain its independence from Great Britain?</h3>
-                <button type="button">1754</button>
-                <button type="button">1801</button>
-                <button type="button">1776</button>
-                <button type="button">1793</button>
+                <button id="a">1754</button>
+                <button id="b">1801</button>
+                <button id="c">1776</button>
+                <button id="d">1793</button>
+                <script>
+                    let body = document.querySelector('body');
+                    document.querySelector('#a').addEventListener('click', function()
+                    {
+
+                    })
+                </script>
             </div>
 
             <div class="section">
@@ -36,19 +43,19 @@
                     <button type="button">Check Answer</button>
                 </form>
                 <script>
-                    document.querySelector('form').addEventListener("button", function(e))
+                    document.querySelector('form').addEventListener("button", function(e)
                     {
                         let a2 = document.querySelector('#a2').value;
                         if (a2 == "Thomas Jefferson")
                         {
-                            <p>Correct</p>
+                            <p>Correct</p>;
                         }
                         else
                         {
-                            <p>Incorrect</p>
+                            <p>Incorrect</p>;
                         }
-                        e.preventDefault()
-                    }
+                        e.preventDefault();
+                    });
                 </script>
             </div>
         </div>
