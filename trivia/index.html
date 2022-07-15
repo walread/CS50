@@ -25,9 +25,21 @@
                 <button id="c">1776</button>
                 <button id="d">1793</button>
                 <script>
+                    let a = document.querySelector('#a');
+                    document.querySelector('#a').addEventListener('click', function() {
+                        a.style.backgroundColor = 'red';
+                    });
                     let b = document.querySelector('#b');
                     document.querySelector('#b').addEventListener('click', function() {
                         b.style.backgroundColor = 'red';
+                    });
+                    let c = document.querySelector('#c');
+                    document.querySelector('#c').addEventListener('click', function() {
+                        c.style.backgroundColor = 'green';
+                    });
+                    let d = document.querySelector('#d');
+                    document.querySelector('#d').addEventListener('click', function() {
+                        d.style.backgroundColor = 'red';
                     });
                 </script>
             </div>
