@@ -35,14 +35,17 @@
                     <input autocomplete="off" id="a2" placeholder="Answer" type="text">
                     <button type="button">Check Answer</button>
                 </form>
-                <p>Incorrect</p>
                 <script>
                     document.querySelector('form').addEventListener("button", function(e))
                     {
                         let a2 = document.querySelector('#a2').value;
                         if (a2 = "Thomas Jefferson")
                         {
-
+                            <p>Correct</p>
+                        }
+                        else
+                        {
+                            <p>Incorrect</p>
                         }
                         e.preventDefault()
                     }
