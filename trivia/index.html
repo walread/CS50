@@ -71,11 +71,12 @@
                 <button id="check">Check Answer</button>
                 <p id="status2"></p>
                 <script>
-                    let answer = document.querySelector('#answer').value;
+                    let answer = document.querySelector('#answer');
                     let check = document.querySelector('#check');
+                    console.log(answer)
                     let status2 = document.querySelector('#status2');
                     document.querySelector('#check').addEventListener('click', function() {
-                        if (answer == "T")
+                        if (answer.value == "T")
                         {
                             check.style.backgroundColor = 'green';
                             status2.innerHTML = "Correct!";
