@@ -11,5 +11,9 @@ main {
 }
 
 img {
-    border: 5px solid #fff
+    border: 5px solid #fff;
+}
+
+#thor2 {
+    align: center;
 }
