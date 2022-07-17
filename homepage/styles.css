@@ -6,6 +6,10 @@ header {
     text-align: center;
 }
 
+#thor1 {
+    margin-top: 50px;
+}
+
 main {
     border: 5px solid #000;
     display: flex;
