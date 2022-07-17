@@ -5,3 +5,7 @@
 header {
     text-align: center;
 }
+
+main {
+    border: 5px solid #000;
+}
