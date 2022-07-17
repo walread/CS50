@@ -9,3 +9,7 @@ header {
 main {
     border: 5px solid #000;
 }
+
+img {
+    border: 5px solid #fff
+}
