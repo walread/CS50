@@ -28,8 +28,13 @@
                 <img src="thor1.jpeg" class="img-fluid w-25" alt="Thor 1" id="thor1">
                 <script>
                     window.setInterval(function(){
-                        if (img)
-                    })
+                        if ("#thor1".style.visibility == 'hidden'){
+                            "#thor1".style.visibility = 'visible';
+                        }
+                        else {
+                            "#thor1".style.visibility = 'hidden';
+                        }
+                    }, 1000);
                 </script>
             </header>
         </div>
