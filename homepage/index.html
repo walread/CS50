@@ -27,12 +27,13 @@
                 <h1>Welcome to my home page!</h1>
                 <img src="thor1.jpeg" class="img-fluid w-25" alt="Thor 1" id="thor1">
                 <script>
+                    var img = document.getElementById('thor1');
                     window.setInterval(function(){
-                        if ("#thor1".style.visibility == 'hidden'){
-                            "#thor1".style.visibility = 'visible';
+                        if (img.style.visibility == 'hidden'){
+                            img.style.visibility = 'visible';
                         }
                         else {
-                            "#thor1".style.visibility = 'hidden';
+                            img.style.visibility = 'hidden';
                         }
                     }, 1000);
                 </script>
