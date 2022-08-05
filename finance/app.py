@@ -120,7 +120,7 @@ def register():
 
     session.clear()
 
-    if request.method == "Post":
+    if request.method == "POST":
 
         if not request.form.get("username"):
             return apology("must provide username", 403)
