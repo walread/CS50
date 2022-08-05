@@ -135,9 +135,7 @@ def register():
         elif len(db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))) != 0:
             return apology("username is already taken", 403)
 
-        
-
-        generate_password_hash("password")
+        db.execute("INSERT * FROM users WHERE username = ? AND hash = ?", "username", generate_password_hash("password"))
 
     else:
         return render_template("register.html")
