@@ -132,11 +132,8 @@ def register():
         elif request.form.get("password") != request.form.get("confirmation"):
             return apology("passwords must match", 403)
 
-        rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
-
-        elif len(rows) == 1:
+        elif len(db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))) != 0:
             return apology("username is already taken", 403)
-
 
     else:
         return render_template("register.html")
