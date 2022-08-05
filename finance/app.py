@@ -135,6 +135,8 @@ def register():
         elif len(db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))) != 0:
             return apology("username is already taken", 403)
 
+        werkzeug.security.generate_password_hash(password, method='pbkdf2:sha256', salt_length=8) 
+
     else:
         return render_template("register.html")
 
