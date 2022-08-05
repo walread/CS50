@@ -118,6 +118,8 @@ def quote():
 def register():
     """Register user"""
 
+    session.clear()
+
     if request.method == "Post":
 
         if not request.form.get("username"):
