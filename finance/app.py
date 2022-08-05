@@ -114,7 +114,7 @@ def quote():
 
     if request.method == "POST":
 
-        
+        if not request.form.get("symbol"):
             return apology("TODO")
 
         return redirect("/quoted")
