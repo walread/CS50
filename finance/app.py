@@ -133,7 +133,9 @@ def register():
             return apology("passwords must match", 403)
 
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
-        elif 
+
+        elif len(rows) == 1:
+            return apology("username is already taken", 403)
 
 
     else:
