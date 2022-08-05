@@ -132,12 +132,16 @@ def register():
         elif request.form.get("password") != request.form.get("confirmation"):
             return apology("passwords do not match", 403)
 
-        elif len(db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))) != 0:
+        rows = 
+
+        elif len(rows) != 0:
             return apology("username is already taken", 403)
 
         username = request.form.get("username")
         hash = generate_password_hash("password")
-        db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, hash)) 
+        db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, hash))
+
+
 
     else:
         return render_template("register.html")
