@@ -130,7 +130,7 @@ def register():
             return apology("must confirm password", 403)
 
         elif request.form.get("password") != request.form.get("confirmation"):
-            return apology("passwords must match", 403)
+            return apology("passwords do not match", 403)
 
         elif len(db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))) != 0:
             return apology("username is already taken", 403)
