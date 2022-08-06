@@ -114,9 +114,9 @@ def quote():
 
     if request.method == "POST":
 
-        info = lookup(request.form.get("symbol"))
+        symbol = lookup(request.form.get("symbol"))
 
-        if not info:
+        if not symbol:
             return apology("Invalid symbol") 
 
         return redirect("/quoted")
