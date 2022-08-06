@@ -117,7 +117,7 @@ def quote():
         symbol = lookup(request.form.get("symbol"))
 
         if not symbol:
-            return apology("Invalid symbol") 
+            return apology("Invalid symbol")
 
         return redirect("/quoted")
 
