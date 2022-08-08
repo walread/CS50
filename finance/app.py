@@ -121,7 +121,7 @@ def quote():
         if not info:
             return apology("Invalid symbol")
 
-        return render_template("quoted.html", name = info{name}, symbol = info{symbol}, price = info{price})
+        return render_template("quoted.html", info = info)
 
     else:
         return render_template("quote.html")
