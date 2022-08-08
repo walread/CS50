@@ -152,7 +152,8 @@ def register():
         elif len(db.execute("SELECT * FROM users WHERE username = ?", username)) != 0:
             return apology("username is already taken", 403)
 
-        hash = generate_password_hash("password")
+        hash = generate_password_hash(password)
+
         db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, hash)
 
         rows = db.execute("SELECT * FROM users WHERE username = ?", username)
