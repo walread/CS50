@@ -133,26 +133,29 @@ def register():
 
     if request.method == "POST":
 
-        if not request.form.get("username"):
+        username = request.form.get("username")
+        password = request.form.get("password")
+        confirmation = request.form.get("confirmation")
+
+        if not username:
             return apology("must provide username", 403)
 
-        elif not request.form.get("password"):
+        elif not password:
             return apology("must provide password", 403)
 
-        elif not request.form.get("confirmation"):
+        elif not confirmation:
             return apology("must confirm password", 403)
 
-        elif request.form.get("password") != request.form.get("confirmation"):
+        elif password != confirmation:
             return apology("passwords do not match", 403)
 
-        elif len(db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))) != 0:
+        elif len(db.execute("SELECT * FROM users WHERE username = ?", username)) != 0:
             return apology("username is already taken", 403)
 
-        username = request.form.get("username")
         hash = generate_password_hash("password")
         db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, hash)
 
-        rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+        rows = db.execute("SELECT * FROM users WHERE username = ?", username)
 
         session["user_id"] = rows[0]["id"]
 
