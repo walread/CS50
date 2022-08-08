@@ -114,10 +114,12 @@ def quote():
 
     if request.method == "POST":
 
-        lookup{} = lookup(request.form.get("symbol"))
+        symbol = request.form.get("symbol")
 
         if not symbol:
-            return apology("Invalid symbol")
+            return apology("Enter")
+
+        lookup{} = lookup(symbol)
 
         return render_template("quoted.html", name = lookup{name}, symbol = lookup{symbol}, price = lookup{price})
 
@@ -142,16 +144,16 @@ def register():
             return apology("must provide username", 403)
 
         elif not password:
-            return apology("must provide password", 403)
+            return apology("Must provide password", 403)
 
         elif not confirmation:
-            return apology("must confirm password", 403)
+            return apology("Must confirm password", 403)
 
         elif password != confirmation:
-            return apology("passwords do not match", 403)
+            return apology("Passwords do not match", 403)
 
         elif len(db.execute("SELECT * FROM users WHERE username = ?", username)) != 0:
-            return apology("username is already taken", 403)
+            return apology("Username is already taken", 403)
 
         db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, hash)
 
