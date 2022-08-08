@@ -114,12 +114,12 @@ def quote():
 
     if request.method == "POST":
 
-        symbol = lookup(request.form.get("symbol"))
+        lookup{} = lookup(request.form.get("symbol"))
 
         if not symbol:
             return apology("Invalid symbol")
 
-        return render_template("quoted.html", name = )
+        return render_template("quoted.html", name = lookup{name}, symbol = lookup{symbol}, price = lookup{price})
 
     else:
         return render_template("quote.html")
