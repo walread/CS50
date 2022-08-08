@@ -119,7 +119,7 @@ def quote():
         if not symbol:
             return apology("Must provide symbol")
 
-        lookup{} = lookup(symbol)
+        lookup = lookup(symbol)
 
         return render_template("quoted.html", name = lookup{name}, symbol = lookup{symbol}, price = lookup{price})
 
