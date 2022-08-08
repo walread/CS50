@@ -117,7 +117,7 @@ def quote():
         symbol = request.form.get("symbol")
 
         if not symbol:
-            return apology("Enter")
+            return apology("Must provide symbol")
 
         lookup{} = lookup(symbol)
 
@@ -141,7 +141,7 @@ def register():
         hash = generate_password_hash(password)
 
         if not username:
-            return apology("must provide username", 403)
+            return apology("Must provide username", 403)
 
         elif not password:
             return apology("Must provide password", 403)
