@@ -119,7 +119,7 @@ def quote():
         if not symbol:
             return apology("Invalid symbol")
 
-        return redirect("/quoted")
+        return render_template("quoted.html", name = )
 
     else:
         return render_template("quote.html")
