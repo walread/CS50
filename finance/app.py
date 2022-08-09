@@ -55,7 +55,6 @@ def buy():
 
         symbol = request.form.get("symbol")
         shares = request.form.get("shares")
-
         info = lookup(symbol)
 
         if not info:
