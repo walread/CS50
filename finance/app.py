@@ -63,6 +63,8 @@ def buy():
         elif not shares:
             return apology("Must provide number of shares")
 
+        cash = db.execute(SELECT )
+
         return render_template("index.html")
 
     else:
