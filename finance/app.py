@@ -59,10 +59,10 @@ def buy():
         info = lookup(symbol)
 
         if not info:
-            return apology("Invalid symbol")
+            return apology("Invalid symbol", 403)
 
         elif not shares:
-            return apology("Must provide shares")
+            return apology("Must provide shares", 403)
 
     else:
         return render_template("buy.html")
