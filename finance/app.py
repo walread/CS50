@@ -64,6 +64,8 @@ def buy():
         elif not shares:
             return apology("Must provide shares")
 
+        return render_template("index.html") 
+
     else:
         return render_template("buy.html")
 
