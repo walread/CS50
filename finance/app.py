@@ -63,7 +63,11 @@ def buy():
         elif not shares:
             return apology("Must provide number of shares")
 
-        cash = db.execute("SELECT cash FROM users WHERE id = ?",)
+        id = session("user_id")
+        cash = db.execute("SELECT cash FROM users WHERE id = ?", id)
+
+        if cash >= (info.price * shares):
+            db.execute("INSERT") 
 
         return render_template("index.html")
 
