@@ -62,9 +62,9 @@ def buy():
             return apology("Invalid symbol")
 
         elif not shares:
-            return apology("Must provide shares")
+            return apology("Must provide number of shares")
 
-        return render_template("index.html") 
+        return render_template("index.html")
 
     else:
         return render_template("buy.html")
