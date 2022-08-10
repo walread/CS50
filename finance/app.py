@@ -53,8 +53,8 @@ def buy():
 
     if request.method == "POST":
 
-        symbol = request.form.get("symbol")
-        shares = request.form.get("shares")
+        symbol = request.form.get("symbol").upper() 
+        shares = int(request.form.get("shares"))
         stock = lookup(symbol)
 
         if not symbol:
