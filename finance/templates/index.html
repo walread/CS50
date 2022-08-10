@@ -3,6 +3,8 @@
 {% block title %}
     Portfolio
 {% endblock %}
+
+{% block main %}
 <table class="table table-striped">
     <thead>
         <tr>
@@ -14,9 +16,23 @@
         </tr>
     </thead>
     <tbody>
-        
+        <tr>
+            <td class="text-start">{{ symbol }}</td>
+            <td class="text-start">{{ name }}</td>
+            <td class="text-end">{{ shares }}</td>
+            <td class="text-end">{{ price }}</td>
+            <td class="text-end">{{ total }}</td>
+        </tr>
     </tbody>
+    <tfoot>
+        <tr>
+            <td class="border-0 fw-bold text-end" colspan="4">Cash</td>
+            <td class="border-0 text-end">{{ cash }}</td>
+        </tr>
+        <tr>
+            <td class="border-0 fw-bold text-end" colspan="4">Total</td>
+            <td class="border-0 text-end">{{ total }}</td>
+        </tr>
+    </tfoot>
 </table>
-{% block main %}
-
 {% endblock %}
