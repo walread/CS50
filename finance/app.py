@@ -152,7 +152,7 @@ def quote():
         symbol = request.form.get("symbol")
 
         if not symbol:
-            return apology("Missing symbol") 
+            return apology("Missing symbol")
 
         info = lookup(symbol)
 
@@ -179,19 +179,19 @@ def register():
         hash = generate_password_hash(password)
 
         if not username:
-            return apology("Must provide username", 403)
+            return apology("Missing username")
 
         elif not password:
-            return apology("Must provide password", 403)
+            return apology("Missing password")
 
         elif not confirmation:
-            return apology("Must confirm password", 403)
+            return apology("Missing password confirmation")
 
         elif password != confirmation:
-            return apology("Passwords do not match", 403)
+            return apology("Passwords do not match")
 
         elif len(db.execute("SELECT * FROM users WHERE username = ?", username)) != 0:
-            return apology("Username is already taken", 403)
+            return apology("Username is not avalible")
 
         db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, hash)
 
