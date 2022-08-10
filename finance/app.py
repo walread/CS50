@@ -46,10 +46,17 @@ def index():
 
     user_id = session["user_id"]
 
-    user = db.execute("SELECT * FROM users WHERE id = ?", user_id)
+    symbol =
+    name =
+    shares =
+    price =
+    holding_total =
+    cash = db.execute("SELECT * FROM users WHERE id = ?", user_id)[0]["cash"]
+    total =
+
     transactions = db.execute("SELECT * FROM transactions WHERE user_id = ?", user_id)
 
-    return render_template("index.html", user = user, transactions = transactions) 
+    return render_template("index.html", cash = cash, transactions = transactions)
 
 
 @app.route("/buy", methods=["GET", "POST"])
