@@ -43,7 +43,8 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    return apology("TODO")
+
+    return render_tempate("index.html")
 
 
 @app.route("/buy", methods=["GET", "POST"])
@@ -53,7 +54,7 @@ def buy():
 
     if request.method == "POST":
 
-        symbol = request.form.get("symbol").upper() 
+        symbol = request.form.get("symbol").upper()
         shares = int(request.form.get("shares"))
         stock = lookup(symbol)
 
