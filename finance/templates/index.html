@@ -17,21 +17,21 @@
     </thead>
     <tbody>
         <tr>
-            <td class="text-start">{{ symbol }}</td>
-            <td class="text-start">{{ name }}</td>
-            <td class="text-end">{{ shares }}</td>
-            <td class="text-end">{{ price }}</td>
-            <td class="text-end">{{ total }}</td>
+            <td class="text-start">{{ transactions.symbol }}</td>
+            <td class="text-start">{{ transactions.name }}</td>
+            <td class="text-end">{{ transactions.shares }}</td>
+            <td class="text-end">{{ transactions.price }}</td>
+            <td class="text-end">{{ users.total }}</td>
         </tr>
     </tbody>
     <tfoot>
         <tr>
             <td class="border-0 fw-bold text-end" colspan="4">Cash</td>
-            <td class="border-0 text-end">{{ cash }}</td>
+            <td class="border-0 text-end">{{ users.cash }}</td>
         </tr>
         <tr>
             <td class="border-0 fw-bold text-end" colspan="4">Total</td>
-            <td class="border-0 text-end">{{ total }}</td>
+            <td class="border-0 text-end">{{ * }}</td>
         </tr>
     </tfoot>
 </table>
