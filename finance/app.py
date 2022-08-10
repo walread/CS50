@@ -57,11 +57,14 @@ def buy():
         shares = request.form.get("shares")
         stock = lookup(symbol)
 
-        if not stock:
+        if not symbol:
+            return apology("Missing symbol")
+
+        elif not stock:
             return apology("Invalid symbol")
 
         elif not shares:
-            return apology("Must provide number of shares")
+            return apology("Missing shares")
 
         user_id = session("user_id")
 
@@ -73,7 +76,7 @@ def buy():
         total_price = stock_price * shares
 
         if cash < total_price:
-            return apology("Not )
+            return apology("Can't afford)
 
         else:
             db.execute("INSERT")
@@ -147,6 +150,9 @@ def quote():
     if request.method == "POST":
 
         symbol = request.form.get("symbol")
+
+        if not symbol:
+            return apology("Missing symbol") 
 
         info = lookup(symbol)
 
