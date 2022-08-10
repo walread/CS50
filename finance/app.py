@@ -46,15 +46,13 @@ def index():
 
     user_id = session["user_id"]
 
-    symbol =
-    name =
-    shares =
-    price =
-    holding_total =
-    cash = db.execute("SELECT * FROM users WHERE id = ?", user_id)[0]["cash"]
-    total =
+    holdings = db.execute("SELECT symbol, name, shares, price FROM transactions WHERE user_id = ?", user_id)
 
-    transactions = db.execute("SELECT * FROM transactions WHERE user_id = ?", user_id)
+    cash = db.execute("SELECT * FROM users WHERE id = ?", user_id)[0]["cash"]
+    
+    holding_total =
+
+    total =
 
     return render_template("index.html", cash = cash, transactions = transactions)
 
