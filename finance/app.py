@@ -66,7 +66,7 @@ def buy():
         elif not shares:
             return apology("Missing shares")
 
-        user_id = session("user_id")
+        user_id = session["user_id"]
 
         cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
 
