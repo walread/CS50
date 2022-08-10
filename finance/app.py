@@ -72,8 +72,12 @@ def buy():
         stock_price = stock["price"]
         total_price = stock_price * shares
 
-        if cash >= :
+        if cash < total_price:
+            return apology("Not )
+
+        else:
             db.execute("INSERT")
+
 
         return render_template("index.html")
 
