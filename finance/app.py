@@ -55,19 +55,24 @@ def buy():
 
         symbol = request.form.get("symbol")
         shares = request.form.get("shares")
-        info = lookup(symbol)
+        stock = lookup(symbol)
 
-        if not info:
+        if not stock:
             return apology("Invalid symbol")
 
         elif not shares:
             return apology("Must provide number of shares")
 
-        id = session("user_id")
-        cash = db.execute("SELECT cash FROM users WHERE id = ?", id)[0]["cash"]
+        user_id = session("user_id")
 
-        
-        if cash >= (info.price * shares):
+        cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
+
+        stock_name = stock["name"]
+        stock_symbol = stock["symbol"]
+        stock_price = stock["price"]
+        total_price = stock_price * shares
+
+        if cash >= :
             db.execute("INSERT")
 
         return render_template("index.html")
