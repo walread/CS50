@@ -44,6 +44,8 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
 
+    user_id = sessions["user_id"]
+
     return render_template("index.html")
 
 
