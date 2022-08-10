@@ -75,13 +75,13 @@ def buy():
         total_price = stock_price * shares
 
         if cash < total_price:
-            return apology("Can't afford)
+            return apology("Can't afford")
 
         else:
             db.execute("INSERT INTO transactions (user_id, symbol, name, shares, price, type) VALUES (?, ?, ?, ?, ?, ?)", user_id, symbol, stock_name, shares, stock_price, "buy")
             db.execute("UPDATE users SET cash = ? WHERE id = ?", cash - total_price, user_id)
 
-        return redirect("/") 
+        return redirect("/")
 
     else:
         return render_template("buy.html")
