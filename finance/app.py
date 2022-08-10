@@ -71,7 +71,6 @@ def buy():
         cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
 
         stock_name = stock["name"]
-        stock_symbol = stock["symbol"]
         stock_price = stock["price"]
         total_price = stock_price * shares
 
@@ -79,7 +78,7 @@ def buy():
             return apology("Can't afford)
 
         else:
-            db.execute("INSERT")
+            db.execute("UPDATE users SET cash = ?")
 
 
         return render_template("index.html")
