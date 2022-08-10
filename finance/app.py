@@ -78,7 +78,7 @@ def buy():
             return apology("Can't afford)
 
         else:
-            db.execute("INSERT INTO transactions (user_id, name, symbol, price, shares, type) VALUES (?, ?, ?, ?, ?)")
+            db.execute("INSERT INTO transactions (user_id, name, symbol, price, shares, type) VALUES (?, ?, ?, ?, ?, ?)", user_id, stock_name, symbol, stock_)
             db.execute("UPDATE users SET cash = ? WHERE id = ?", cash - total_price, user_id)
 
 
