@@ -64,8 +64,9 @@ def buy():
             return apology("Must provide number of shares")
 
         id = session("user_id")
-        cash = db.execute("SELECT cash FROM users WHERE id = ?", id)[0]["cash"] 
+        cash = db.execute("SELECT cash FROM users WHERE id = ?", id)[0]["cash"]
 
+        
         if cash >= (info.price * shares):
             db.execute("INSERT")
 
