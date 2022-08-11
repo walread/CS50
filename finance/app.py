@@ -57,7 +57,7 @@ def index():
     for holding in holdings:
         total += holding["price"] * holding["shares_sum"]
 
-    return render_template("index.html", holdings = holdings, info = info, cash = cash, total = total)
+    return render_template("index.html", holdings = holdings, cash = cash, total = total)
 
 
 @app.route("/buy", methods=["GET", "POST"])
