@@ -240,7 +240,7 @@ def sell():
         price = info["price"]
         total = price * shares
         cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
-        current_shares = db.execute("SELECT shares FROM transactions WHERE user_id = ? AND symbol = ? GROUP BY symbol", user_id, symbol)[0]["shares"]
+        current_shares = db.execute("SELECT SUM(shares) AS shares_sum FROM transactions WHERE user_id = ? AND symbol = ? GROUP BY symbol", user_id, symbol)[0]["shares_sum"]
 
         if not symbol:
             return apology("Missing symbol")
