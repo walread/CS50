@@ -229,6 +229,8 @@ def sell():
 
     user_id = session["user_id"]
 
+    holdings = db.execute("SELECT symbol, name, SUM(shares) AS shares_sum, price FROM transactions WHERE user_id = ? GROUP BY symbol", user_id)
+
     if request.method == "POST":
 
         symbol = request.form.get("symbol").upper()
@@ -244,7 +246,5 @@ def sell():
         return redirect("/")
 
     else:
-
-        holdings = db.execute("SELECT symbol FROM transactions WHERE user_id = ? GROUP BY symbol", user_id)
 
         return render_template("sell.html", holdings = holdings)
