@@ -51,7 +51,7 @@ def index():
     prices = []
     for holding in holdings:
         price = lookup(holding["symbol"])
-        prices.append(price["price"])
+        prices.append(price)
 
     cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
 
