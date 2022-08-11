@@ -53,7 +53,7 @@ def index():
     total = cash
 
     for holding in holdings:
-        info = lookup(holding)
+        info = lookup(holding["symbol"])
         total += info["price"] * holding["shares_sum"]
 
     return render_template("index.html", holdings = holdings, cash = cash, total = total)
