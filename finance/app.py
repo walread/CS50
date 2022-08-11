@@ -229,7 +229,7 @@ def sell():
 
     if request.method == "POST":
 
-        return redirect("/", holdings = holdings)
+        return redirect("/")
 
     else:
 
@@ -237,4 +237,4 @@ def sell():
 
         holdings = db.execute("SELECT symbol, name, SUM(shares) AS shares_sum, price FROM transactions WHERE user_id = ? GROUP BY symbol", user_id)
 
-        return render_template("sell.html", holdings)
+        return render_template("sell.html", holdings) 
