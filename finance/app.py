@@ -229,11 +229,12 @@ def sell():
 
     if request.method == "POST":
 
+        return redirect("/", holdings = holdings)
+
+    else:
+
         user_id = session["user_id"]
 
         holdings = db.execute("SELECT symbol, name, SUM(shares) AS shares_sum, price FROM transactions WHERE user_id = ? GROUP BY symbol", user_id)
 
-        return redirect("/", holdings = holdings)
-
-    else:
-        return render_template("sell.html")
+        return render_template("sell.html", holdings)
