@@ -50,7 +50,10 @@ def index():
 
     cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
 
-    total =
+    total = cash
+
+    for holding in holdings:
+        total += holding["price"]
 
     return render_template("index.html", holdings = holdings, cash = cash)
 
