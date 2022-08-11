@@ -12,6 +12,7 @@
                     {% for holding in holdings %}
                     <option value="{{ holding.symbol }}">{{ holding.symbol }}</option>
                     {% endfor %}
+                </select>
         </div>
         <div class="mb-3">
             <input autocomplete="off" class="form-control mx-auto w-auto" min="1" name="shares" placeholder="Shares" type="number">
