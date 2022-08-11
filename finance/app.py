@@ -51,7 +51,7 @@ def index():
     prices = []
     for holding in holdings:
         price = lookup(holding["symbol"])
-        prices.append(price)
+        prices.append(price["price"])
 
     cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
 
@@ -61,7 +61,7 @@ def index():
         info = lookup(holding["symbol"])
         total += info["price"] * holding["shares_sum"]
 
-    return render_template("index.html", holdings = holdings, cash = cash, total = total)
+    return render_template("index.html", holdings = holdings, prices = prices, cash = cash, total = total)
 
 
 @app.route("/buy", methods=["GET", "POST"])
