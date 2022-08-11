@@ -12,16 +12,16 @@
             <th class="text-start">Name</th>
             <th class="text-end">Shares</th>
             <th class="text-end">Price</th>
-            <th class="text-end">Total</th>
+            <th class="text-end">TOTAL</th>
         </tr>
     </thead>
     <tbody>
         {% for holding in holdings %}
             <tr>
-                <td class="text-start">{{ transactions.symbol }}</td>
-                <td class="text-start">{{ transactions.name }}</td>
-                <td class="text-end">{{ transactions.shares }}</td>
-                <td class="text-end">{{ transactions.price | usd }}</td>
+                <td class="text-start">{{ holdings.symbol }}</td>
+                <td class="text-start">{{ holdings.name }}</td>
+                <td class="text-end">{{ holdings.shares }}</td>
+                <td class="text-end">{{ holdings.price | usd }}</td>
                 <td class="text-end">*</td>
             </tr>
         {% endfor %}
