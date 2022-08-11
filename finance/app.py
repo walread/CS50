@@ -233,9 +233,8 @@ def sell():
 
     if request.method == "POST":
 
-        symbol = request.form.get("symbol").upper()
-        shares = int(request.form.get("shares"))
-        info = lookup(symbol) 
+        symbol = request.form.get("symbol")
+        shares = request.form.get("shares")
 
         if not symbol:
             return apology("Missing symbol")
