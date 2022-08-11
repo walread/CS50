@@ -232,7 +232,7 @@ def sell():
     if request.method == "POST":
 
         symbol = request.form.get("symbol").upper()
-        shares = request.form.get("shares")
+        shares = int(request.form.get("shares"))
         stock = lookup(symbol)
 
         if not symbol:
