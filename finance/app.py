@@ -235,12 +235,21 @@ def sell():
 
         symbol = request.form.get("symbol")
         shares = request.form.get("shares")
+        info = lookup(symbol)
+        name = info["name"]
+        price = info["price"]
+        total = price * shares
+        cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
 
         if not symbol:
             return apology("Missing symbol")
 
         elif not shares:
             return apology("Missing shares")
+
+        else:
+            db.execute("INSERT INTO transactions (user_id, symbol, name, shares, price, type) VALUES (?, ?, ?, ?, ?, ?)", user_id, symbol, name, shares, price, "sell")
+            db.execute("UPDATE users SET cash = ? WHERE id = ?", cash + total, user_id)
 
         return redirect("/")
 
