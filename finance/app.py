@@ -46,7 +46,7 @@ def index():
 
     user_id = session["user_id"]
 
-    holdings = db.execute("SELECT symbol, name, SUM(shares), price FROM transactions WHERE user_id = ? GROUP BY symbol", user_id)
+    holdings = db.execute("SELECT symbol, name, SUM(shares) AS shares, price FROM transactions WHERE user_id = ? GROUP BY symbol", user_id)
 
     cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
 
@@ -54,7 +54,7 @@ def index():
 
     for holding in holdings:
         price = lookup(holding["symbol"])
-        total += price * holding["SUM(shares)"]
+        total += price * holding["shares"]
 
     return render_template("index.html", holdings = holdings, cash = cash, total = total)
 
