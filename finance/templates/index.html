@@ -16,13 +16,15 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td class="text-start">{{ transactions.symbol }}</td>
-            <td class="text-start">{{ transactions.name }}</td>
-            <td class="text-end">{{ transactions.shares }}</td>
-            <td class="text-end">{{ transactions.price | usd }}</td>
-            <td class="text-end">*</td>
-        </tr>
+        {% for holding in holdings %}
+            <tr>
+                <td class="text-start">{{ transactions.symbol }}</td>
+                <td class="text-start">{{ transactions.name }}</td>
+                <td class="text-end">{{ transactions.shares }}</td>
+                <td class="text-end">{{ transactions.price | usd }}</td>
+                <td class="text-end">*</td>
+            </tr>
+        {% endfor %}
     </tbody>
     <tfoot>
         <tr>
