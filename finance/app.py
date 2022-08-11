@@ -61,7 +61,7 @@ def index():
         info = lookup(holding["symbol"])
         total += info["price"] * holding["shares_sum"]
 
-    return render_template("index.html", holdings = holdings, prices = prices, cash = cash, total = total) 
+    return render_template("index.html", holdings = holdings, prices = prices, cash = cash, total = total)
 
 
 @app.route("/buy", methods=["GET", "POST"])
@@ -226,4 +226,10 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    return apology("TODO")
+
+    if request.method == "POST":
+
+        return redirect("/")
+
+    else:
+        return render_template("sell.html")
