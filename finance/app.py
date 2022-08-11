@@ -49,8 +49,8 @@ def index():
     holdings = db.execute("SELECT symbol, name, shares, price FROM transactions WHERE user_id = ?", user_id)
 
     holding_total =
-    
-    cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
+
+    cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"] 
 
     total =
 
