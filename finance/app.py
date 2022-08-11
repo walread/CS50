@@ -59,7 +59,7 @@ def index():
 
     for holding in holdings:
 
-        total += prices[holding]["price"] * holding["shares_sum"]
+        total += prices[1]["price"] * holding["shares_sum"]
 
     return render_template("index.html", holdings = holdings, prices = prices, cash = cash, total = total)
 
