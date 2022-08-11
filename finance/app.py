@@ -46,7 +46,7 @@ def index():
 
     user_id = session["user_id"]
 
-    holdings = db.execute("SELECT symbol, name, SUM(shares), price FROM transactions WHERE user_id = ?", user_id)
+    holdings = db.execute("SELECT symbol, name, SUM(shares), price FROM transactions WHERE user_id = ? GROUP BY shares", user_id)
 
     cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
 
