@@ -235,7 +235,7 @@ def sell():
 
         symbol = request.form.get("symbol").upper()
         shares = int(request.form.get("shares"))
-        stock = lookup(symbol)
+        info = lookup(symbol) 
 
         if not symbol:
             return apology("Missing symbol")
