@@ -76,7 +76,6 @@ def buy():
         stock = lookup(symbol)
         stock_name = stock["name"]
         stock_price = stock["price"]
-        total_price = stock_price * int(shares)
         user_id = session["user_id"]
         cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
 
@@ -89,6 +88,8 @@ def buy():
         elif not shares:
             return apology("Missing shares")
 
+        total_price = stock_price * int(shares)
+        
         if cash < total_price:
             return apology("Can't afford")
 
