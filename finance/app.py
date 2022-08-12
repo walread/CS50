@@ -84,6 +84,9 @@ def buy():
         elif not shares:
             return apology("Missing shares")
 
+        elif int(shares) <= 0:
+            return apology("Shares must be a positive integer") 
+
         user_id = session["user_id"]
         cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
         stock_name = stock["name"]
