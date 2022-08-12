@@ -72,7 +72,6 @@ def buy():
     if request.method == "POST":
 
         symbol = request.form.get("symbol").upper()
-        shares = int(request.form.get("shares"))
         stock = lookup(symbol)
 
         if not symbol:
@@ -81,11 +80,10 @@ def buy():
         elif not stock:
             return apology("Invalid symbol")
 
-        elif not shares:
-            return apology("Missing shares")
-
-        elif shares <=0:
-            return apology("Invalid number of shares")
+        try:
+            shares = int(request.form.get("shares"))
+        except:
+            return apology("Shares must be a positive integer")
 
         user_id = session["user_id"]
 
