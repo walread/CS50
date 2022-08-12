@@ -84,20 +84,22 @@ def buy():
         elif not shares:
             return apology("Missing shares")
 
-        elif int(shares) <= 0:
-            return apology("Invalid shares")
+        shares = int(shares)
+
+        if shares <= 0:
+            return apology("Too few shares")
 
         user_id = session["user_id"]
         cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
         stock_name = stock["name"]
         stock_price = stock["price"]
-        total_price = stock_price * int(shares)
+        total_price = stock_price * shares
 
         if cash < total_price:
             return apology("Can't afford")
 
         else:
-            db.execute("INSERT INTO transactions (user_id, symbol, name, shares, price, type) VALUES (?, ?, ?, ?, ?, ?)", user_id, symbol, stock_name, int(shares), stock_price, "Bought")
+            db.execute("INSERT INTO transactions (user_id, symbol, name, shares, price, type) VALUES (?, ?, ?, ?, ?, ?)", user_id, symbol, stock_name, shares, stock_price, "Bought")
             db.execute("UPDATE users SET cash = ? WHERE id = ?", cash - total_price, user_id)
 
         return redirect("/")
