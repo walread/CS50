@@ -84,6 +84,9 @@ def buy():
         elif not shares:
             return apology("Missing shares")
 
+        elif shares <=0:
+            return apology("Invalid number of shares")
+
         user_id = session["user_id"]
 
         cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
