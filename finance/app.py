@@ -112,9 +112,9 @@ def history():
 
     user_id = session["user_id"]
 
-    holdings = db.execute("SELECT symbol, shares, price, time FROM transactions WHERE user_id = ?", user_id)
+    holdings = db.execute("SELECT symbol, shares, price, type, time FROM transactions WHERE user_id = ?", user_id)
 
-    return render_template("history.html", holdings = holdings) 
+    return render_template("history.html", holdings = holdings)
 
 
 @app.route("/login", methods=["GET", "POST"])
