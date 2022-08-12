@@ -11,6 +11,7 @@
             <th class="text-start">Symbol</th>
             <th class="text-end">Shares</th>
             <th class="text-end">Price</th>
+            <th class="text-end">Transaction Type</th>
             <th class="text-end">Transacted</th>
         </tr>
     </thead>
@@ -20,6 +21,7 @@
                 <td class="text-start">{{ holding.symbol }}</td>
                 <td class="text-end">{{ holding.shares }}</td>
                 <td class="text-end">{{ holding.price | usd }}</td>
+                <td class="text-end">{{ holding.type }}</td>
                 <td class="text-end">{{ holding.time }}</td>
             </tr>
         {% endfor %}
