@@ -54,7 +54,7 @@ def index():
         db.execute("UPDATE transactions SET current_price = ? WHERE user_id = ? AND symbol = ?", info["price"], user_id, holding["symbol"])
         total += info["price"] * holding["shares_sum"]
 
-    holdings = db.execute("SELECT symbol, name, SUM(shares) AS shares_sum, price, current_price FROM transactions WHERE user_id = ? GROUP BY symbol HAVING shares_sum > 0", user_id)
+    holdings = db.execute("SELECT symbol, name, SUM(shares) AS shares_sum, price, current_price, SUM(total) AS total_sum FROM transactions WHERE user_id = ? GROUP BY symbol HAVING shares_sum > 0", user_id)
 
     return render_template("index.html", holdings = holdings, cash = cash, total = total)
 
