@@ -282,6 +282,5 @@ def sell():
         return render_template("sell.html", holdings = holdings)
 
 
-# fix int casting issue in buy and sell
 # delete name from index when not currently holding any shares
 # update realtime price of holding on index page
