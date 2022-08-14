@@ -56,7 +56,7 @@ def index():
 
     holdings = db.execute("SELECT symbol, name, SUM(shares) AS shares_sum, price, current_price, SUM(total) AS total_sum FROM transactions WHERE user_id = ? GROUP BY symbol HAVING shares_sum > 0", user_id)
 
-    return render_template("index.html", holdings = holdings, cash = cash, total = total)
+    return render_template("index.html", holdings=holdings, cash=cash, total=total)
 
 
 @app.route("/buy", methods=["GET", "POST"])
@@ -115,7 +115,7 @@ def history():
 
     holdings = db.execute("SELECT symbol, shares, price, type, time FROM transactions WHERE user_id = ?", user_id)
 
-    return render_template("history.html", holdings = holdings)
+    return render_template("history.html", holdings=holdings)
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -182,7 +182,7 @@ def quote():
         if not info:
             return apology("Invalid symbol")
 
-        return render_template("quoted.html", info = info)
+        return render_template("quoted.html", info=info)
 
     else:
         return render_template("quote.html")
@@ -275,4 +275,4 @@ def sell():
 
         holdings = db.execute("SELECT symbol FROM transactions WHERE user_id = ? GROUP BY symbol", user_id)
 
-        return render_template("sell.html", holdings = holdings)
+        return render_template("sell.html", holdings=holdings)
