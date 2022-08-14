@@ -51,7 +51,8 @@ def index():
 
     for holding in holdings:
         info = lookup(holding["symbol"])
-        db.execute("UPDATE transactions SET current_price = ? WHERE user_id = ? AND symbol = ?", info["price"], user_id, holding["symbol"])
+        db.execute("UPDATE transactions SET current_price = ? WHERE user_id = ? AND symbol = ?",
+            info["price"], user_id, holding["symbol"])
         total += info["price"] * holding["shares_sum"]
 
     holdings = db.execute("SELECT symbol, name, SUM(shares) AS shares_sum, price, current_price, SUM(total) AS total_sum FROM transactions WHERE user_id = ? GROUP BY symbol HAVING shares_sum > 0", user_id)
@@ -97,7 +98,8 @@ def buy():
             return apology("Can't afford")
 
         else:
-            db.execute("INSERT INTO transactions (user_id, symbol, name, shares, price, current_price, total, type) VALUES (?, ?, ?, ?, ?, ?, ?, ?)", user_id, symbol, name, shares, price, price, total, "Bought")
+            db.execute("INSERT INTO transactions (user_id, symbol, name, shares, price, current_price, total, type) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+                user_id, symbol, name, shares, price, price, total, "Bought")
             db.execute("UPDATE users SET cash = ? WHERE id = ?", cash - total, user_id)
 
         return redirect("/")
@@ -260,13 +262,15 @@ def sell():
         name = info["name"]
         price = info["price"]
         total = price * shares
-        current_shares = db.execute("SELECT SUM(shares) AS shares_sum FROM transactions WHERE user_id = ? AND symbol = ? GROUP BY symbol", user_id, symbol)[0]["shares_sum"]
+        current_shares = db.execute("SELECT SUM(shares) AS shares_sum FROM transactions WHERE user_id = ? AND symbol = ? GROUP BY symbol",
+            user_id, symbol)[0]["shares_sum"]
 
         if shares > current_shares:
             return apology("Attepmting to sell more shares than are owned")
 
         else:
-            db.execute("INSERT INTO transactions (user_id, symbol, name, shares, price, current_price, total, type) VALUES (?, ?, ?, ?, ?, ?, ?, ?)", user_id, symbol, name, -shares, price, price, -total, "Sold")
+            db.execute("INSERT INTO transactions (user_id, symbol, name, shares, price, current_price, total, type) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+                user_id, symbol, name, -shares, price, price, -total, "Sold")
             db.execute("UPDATE users SET cash = ? WHERE id = ?", cash + total, user_id)
 
         return redirect("/")
