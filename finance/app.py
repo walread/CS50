@@ -268,9 +268,9 @@ def sell():
 
     else:
 
-        holdings = db.execute("SELECT symbol, SUM(shares) AS shares_sum FROM transactions WHERE user_id = ? GROUP BY symbol", user_id)
+        holdings = db.execute("SELECT symbol FROM transactions WHERE user_id = ? GROUP BY symbol", user_id)
 
-        return render_template("sell.html", holdings = holdings) 
+        return render_template("sell.html", holdings = holdings)
 
 
 # fix int casting issue in buy and sell
