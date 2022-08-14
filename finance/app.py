@@ -84,7 +84,7 @@ def buy():
         elif not shares:
             return apology("Missing shares")
 
-        elif not int(shares):
+        elif shares != int(shares)
             return apology("Invalid shares")
 
         shares = int(shares)
