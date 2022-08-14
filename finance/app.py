@@ -97,7 +97,7 @@ def buy():
             return apology("Can't afford")
 
         else:
-            db.execute("INSERT INTO transactions (user_id, symbol, name, shares, price, type, total) VALUES (?, ?, ?, ?, ?, ?, ?)", user_id, symbol, name, shares, price, "Bought", total)
+            db.execute("INSERT INTO transactions (user_id, symbol, name, shares, price, current_price, total, type) VALUES (?, ?, ?, ?, ?, ?, ?, ?)", user_id, symbol, name, shares, price, price, total, "Bought")
             db.execute("UPDATE users SET cash = ? WHERE id = ?", cash - total, user_id)
 
         return redirect("/")
@@ -266,7 +266,7 @@ def sell():
             return apology("Attepmting to sell more shares than are owned")
 
         else:
-            db.execute("INSERT INTO transactions (user_id, symbol, name, shares, price, type, total) VALUES (?, ?, ?, ?, ?, ?, ?)", user_id, symbol, name, -shares, price, "Sold", total)
+            db.execute("INSERT INTO transactions (user_id, symbol, name, shares, price, current_price, total, type) VALUES (?, ?, ?, ?, ?, ?, ?, ?)", user_id, symbol, name, -shares, price, price, total "Sold") 
             db.execute("UPDATE users SET cash = ? WHERE id = ?", cash + total, user_id)
 
         return redirect("/")
