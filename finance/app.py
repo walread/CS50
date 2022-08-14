@@ -50,7 +50,7 @@ def index():
     total = cash
 
     for holding in holdings:
-        if holding["shares_SUM"] == 0:
+        if holding["shares_sum"] == 0:
             db.execute("DELETE FROM transactions WHERE user_id = ? AND symbol = ?", user_id, holding["symbol"])
         else:
             info = lookup(holding["symbol"])
