@@ -49,7 +49,8 @@ def index():
     holdings = db.execute("SELECT symbol, name, SUM(shares) AS shares_sum, price FROM transactions WHERE user_id = ? GROUP BY symbol", user_id)
 
     for holding in holdings:
-         = lookup(holding["symbol"])
+        if holding[]
+        current_price = lookup(holding["symbol"])
 
     cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
 
