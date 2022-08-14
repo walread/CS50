@@ -50,14 +50,11 @@ def index():
     total = cash
 
     for holding in holdings:
-        if holding["shares_sum"] == 0:
-            db.execute("DELETE FROM transactions WHERE user_id = ? AND symbol = ?", user_id, holding["symbol"])
-        else:
-            info = lookup(holding["symbol"])
-            db.execute("UPDATE transactions SET current_price = ? WHERE user_id = ? AND symbol = ?", info["price"], user_id, holding["symbol"])
-            total += info["price"] * holding["shares_sum"]
+        info = lookup(holding["symbol"])
+        db.execute("UPDATE transactions SET current_price = ? WHERE user_id = ? AND symbol = ?", info["price"], user_id, holding["symbol"])
+        total += info["price"] * holding["shares_sum"]
 
-    holdings = db.execute("SELECT symbol, name, SUM(shares) AS shares_sum, price, current_price FROM transactions WHERE user_id = ? AND shares_sum != 0 GROUP BY symbol", user_id)
+    holdings = db.execute("SELECT symbol, name, SUM(shares) AS shares_sum, price, current_price FROM transactions WHERE user_id = ? AND shares != 0 GROUP BY symbol", user_id)
 
     return render_template("index.html", holdings = holdings, cash = cash, total = total)
 
