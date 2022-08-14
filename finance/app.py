@@ -264,17 +264,9 @@ def sell():
         name = info["name"]
         price = info["price"]
         total = price * shares
-
-        if cash < total:
-            return apology("Can't afford")
-
-        else:
-            db.execute("INSERT INTO transactions (user_id, symbol, name, shares, price, type) VALUES (?, ?, ?, ?, ?, ?)", user_id, symbol, name, shares, price, "Bought")
-            db.execute("UPDATE users SET cash = ? WHERE id = ?", cash - total, user_id)
-
         current_shares = db.execute("SELECT SUM(shares) AS shares_sum FROM transactions WHERE user_id = ? AND symbol = ? GROUP BY symbol", user_id, symbol)[0]["shares_sum"]
 
-        elif shares > current_shares:
+        if shares > current_shares:
             return apology("Attepmting to sell more shares than are owned")
 
         else:
