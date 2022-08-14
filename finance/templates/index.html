@@ -25,7 +25,7 @@
                 <td class="text-end">{{ holding.shares_sum }}</td>
                 <td class="text-end">{{ holding.current_price | usd }}</td>
                 <td class="text-end">{{ (holding.current_price * holding.shares_sum) | usd }}</td>
-                <td class="text-end">{{ (holding.total_sum / holding.shares_sum) | usd }}</td>
+                <td class="text-end"></td>
                 <td class="text-end">{{ ((holding.current_price - holding.price) / holding.price) * 100 | float }}%</td>
             </tr>
         {% endfor %}
