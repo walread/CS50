@@ -240,8 +240,6 @@ def sell():
 
     user_id = session["user_id"]
 
-    holdings = db.execute("SELECT symbol, SUM(shares) AS shares_sum, FROM transactions WHERE user_id = ? GROUP BY symbol", user_id)
-
     if request.method == "POST":
 
         symbol = request.form.get("symbol")
@@ -270,7 +268,9 @@ def sell():
 
     else:
 
-        return render_template("sell.html", holdings = holdings)
+        holdings = db.execute("SELECT symbol, SUM(shares) AS shares_sum FROM transactions WHERE user_id = ? GROUP BY symbol", user_id)
+
+        return render_template("sell.html", holdings = holdings) 
 
 
 # fix int casting issue in buy and sell
