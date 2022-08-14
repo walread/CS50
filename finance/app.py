@@ -45,23 +45,17 @@ def index():
     """Show portfolio of stocks"""
 
     user_id = session["user_id"]
-
     holdings = db.execute("SELECT symbol, name, SUM(shares) AS shares_sum, price FROM transactions WHERE user_id = ? GROUP BY symbol", user_id)
+    cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
+    total = cash
 
     for holding in holdings:
-        if holding["shares_SUM"] = 0:
+        if holding["shares_SUM"] == 0:
             db.execute("DELETE FROM transactions WHERE user_id = ? AND symbol = ?", user_id, holding["symbol"])
         else:
             info = lookup(holding["symbol"])
             db.execute("UPDATE current_price FROM transactions WHERE user_id = ? AND symbol = ?", user_id, info["price"])
-
-    cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
-
-    total = cash
-
-    for holding in holdings:
-        info = lookup(holding["symbol"])
-        total += info["price"] * holding["shares_sum"]
+            total += info["price"] * holding["shares_sum"]
 
     return render_template("index.html", holdings = holdings, cash = cash, total = total)
 
