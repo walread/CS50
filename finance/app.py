@@ -243,19 +243,36 @@ def sell():
     if request.method == "POST":
 
         symbol = request.form.get("symbol")
-        shares = int(request.form.get("shares"))
         info = lookup(symbol)
-        name = info["name"]
-        price = info["price"]
-        total = price * shares
-        cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
-        current_shares = db.execute("SELECT SUM(shares) AS shares_sum FROM transactions WHERE user_id = ? AND symbol = ? GROUP BY symbol", user_id, symbol)[0]["shares_sum"]
+        shares = request.form.get("shares")
 
         if not symbol:
             return apology("Missing symbol")
 
         elif not shares:
             return apology("Missing shares")
+
+        try:
+            shares = int(shares)
+        except:
+            return apology("Invalid shares")
+
+        if shares <= 0:
+            return apology("Too few shares")
+
+        cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
+        name = info["name"]
+        price = info["price"]
+        total = price * shares
+
+        if cash < total:
+            return apology("Can't afford")
+
+        else:
+            db.execute("INSERT INTO transactions (user_id, symbol, name, shares, price, type) VALUES (?, ?, ?, ?, ?, ?)", user_id, symbol, name, shares, price, "Bought")
+            db.execute("UPDATE users SET cash = ? WHERE id = ?", cash - total, user_id)
+
+        current_shares = db.execute("SELECT SUM(shares) AS shares_sum FROM transactions WHERE user_id = ? AND symbol = ? GROUP BY symbol", user_id, symbol)[0]["shares_sum"]
 
         elif shares > current_shares:
             return apology("Attepmting to sell more shares than are owned")
