@@ -224,9 +224,9 @@ def register():
 
         db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, hash)
 
-        rows = db.execute("SELECT * FROM users WHERE username = ?", username)
+        user = db.execute("SELECT * FROM users WHERE username = ?", username)
 
-        session["user_id"] = rows[0]["id"]
+        session["user_id"] = user[0]["id"]
 
         return redirect("/")
 
