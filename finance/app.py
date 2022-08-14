@@ -54,7 +54,7 @@ def index():
             db.execute("DELETE FROM transactions WHERE user_id = ? AND symbol = ?", user_id, holding["symbol"])
         else:
             info = lookup(holding["symbol"])
-            db.execute("UPDATE current_price FROM transactions WHERE user_id = ? AND symbol = ?", user_id, info["price"])
+            db.execute("UPDATE transactions SET current_price = ? WHERE user_id = ? AND symbol = ?", info["price"], user_id, holding["symbol"])
             total += info["price"] * holding["shares_sum"]
 
     return render_template("index.html", holdings = holdings, cash = cash, total = total)
