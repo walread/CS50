@@ -204,7 +204,6 @@ def register():
         username = request.form.get("username")
         password = request.form.get("password")
         confirmation = request.form.get("confirmation")
-        hash = generate_password_hash(password)
 
         if not username:
             return apology("Missing username")
@@ -220,6 +219,8 @@ def register():
 
         elif len(db.execute("SELECT * FROM users WHERE username = ?", username)) != 0:
             return apology("Username is not avalible")
+
+        hash = generate_password_hash(password)
 
         db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, hash)
 
