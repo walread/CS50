@@ -266,7 +266,7 @@ def sell():
             return apology("Attepmting to sell more shares than are owned")
 
         else:
-            db.execute("INSERT INTO transactions (user_id, symbol, name, shares, price, current_price, total, type) VALUES (?, ?, ?, ?, ?, ?, ?, ?)", user_id, symbol, name, -shares, price, price, total, "Sold")
+            db.execute("INSERT INTO transactions (user_id, symbol, name, shares, price, current_price, total, type) VALUES (?, ?, ?, ?, ?, ?, ?, ?)", user_id, symbol, name, -shares, price, price, -total, "Sold")
             db.execute("UPDATE users SET cash = ? WHERE id = ?", cash + total, user_id)
 
         return redirect("/")
