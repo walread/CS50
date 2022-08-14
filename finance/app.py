@@ -48,7 +48,6 @@ def index():
 
     holdings = db.execute("SELECT symbol, name, SUM(shares) AS shares_sum, price FROM transactions WHERE user_id = ? GROUP BY symbol", user_id)
 
-    prices = []
     for holding in holdings:
         price = lookup(holding["symbol"])
         prices.append(price)
