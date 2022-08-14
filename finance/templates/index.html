@@ -11,9 +11,9 @@
             <th class="text-start">Symbol</th>
             <th class="text-start">Name</th>
             <th class="text-end">Shares</th>
-            <th class="text-end">Average Purchaced Price</th>
             <th class="text-end">Current Price</th>
             <th class="text-end">TOTAL</th>
+            <th class="text-end">Avg Purchace Price</th>
             <th class="text-end">Gain/Loss</th>
         </tr>
     </thead>
@@ -23,9 +23,9 @@
                 <td class="text-start">{{ holding.symbol }}</td>
                 <td class="text-start">{{ holding.name }}</td>
                 <td class="text-end">{{ holding.shares_sum }}</td>
-                <td class="text-end"></td>
                 <td class="text-end">{{ holding.current_price | usd }}</td>
                 <td class="text-end">{{ (holding.current_price * holding.shares_sum) | usd }}</td>
+                <td class="text-end"></td>
                 <td class="text-end">{{ ((holding.current_price - holding.price) / holding.price) * 100 | float }}%</td>
             </tr>
         {% endfor %}
