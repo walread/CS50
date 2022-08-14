@@ -86,6 +86,9 @@ def buy():
 
         shares = int(shares)
 
+        if not shares:
+            return apology("Shares must be an integer") 
+
         if shares <= 0:
             return apology("Too few shares")
 
