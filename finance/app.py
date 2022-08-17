@@ -216,6 +216,9 @@ def register():
         elif password != confirmation:
             return apology("Passwords do not match")
 
+        elif len(password) < 8:
+            return apology("Password must be at least 10 characters")
+
         elif not re.findall("\d", password):
             return apology("Password must contain at least one number")
 
