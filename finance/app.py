@@ -1,4 +1,5 @@
 import os
+import re
 
 from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session
@@ -212,7 +213,7 @@ def register():
         elif len(password) < 10:
             return apology("Password must be at least 10 characters")
 
-        elif password != '.*\d.*':
+        elif password != re.search(".*\d.*", password):
             return apology("Password must contain at least one number")
 
         elif not confirmation:
