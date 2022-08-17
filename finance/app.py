@@ -210,18 +210,6 @@ def register():
         elif not password:
             return apology("Missing password")
 
-        elif len(password) < 10:
-            return apology("Password must be at least 10 characters")
-
-        elif not re.findall("[A-Z]", password):
-            return apology("Password must contain at least one uppercase letter")
-
-        elif not re.findall("[a-z]", password):
-            return apology("Password must contain at least one lowercase letter")
-
-        elif not re.findall("\d", password):
-            return apology("Password must contain at least one number")
-
         elif not confirmation:
             return apology("Missing password confirmation")
 
