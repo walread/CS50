@@ -216,6 +216,12 @@ def register():
         elif password != confirmation:
             return apology("Passwords do not match")
 
+        elif len(password) < 10:
+            return apology("Password must be at least 10 characters")
+
+        elif not re.findall("\d", password):
+            return apology("Password must contain at least one number")
+
         elif len(db.execute("SELECT * FROM users WHERE username = ?", username)) != 0:
             return apology("Username is not avalible")
 
