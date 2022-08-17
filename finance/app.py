@@ -209,6 +209,9 @@ def register():
         elif not password:
             return apology("Missing password")
 
+        elif len(password) < 10:
+            return apology("Password must be at least 10 characters")
+
         elif not confirmation:
             return apology("Missing password confirmation")
 
