@@ -4,8 +4,8 @@ def main():
     print(emoji(input))
 
 # define emoji function
-def emoji():
-    if
+def emoji(str):
+    if str 
 
 # call main function
 main()
