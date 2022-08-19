@@ -11,6 +11,7 @@ def emoji(str):
         str = str.replace(":(", "🙁")
     else:
         str = str
+    return str
 
 # call main function
 main()
