@@ -1,5 +1,3 @@
-input = input("Input: ")
+input = input("Input: ").split()
 
-input =
-
-print(input.)
+print(input, sep="...") 
