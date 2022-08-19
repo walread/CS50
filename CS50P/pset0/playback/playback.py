@@ -1,3 +1,3 @@
-input = input("Input: ").split()
+input = input("Input: ")
 
-print(input, sep="...") 
+print(input.replace(" ", "..."))
