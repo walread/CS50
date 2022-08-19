@@ -1,16 +1,16 @@
 def main():
-    input = ("Input: ")
+    string = input("Input: ")
 
-    print(emoji(input))
+    emoji(string)
 
 # define emoji function
 def emoji(str):
     if ":)" in str:
-        str = str.replace(":)", "🙂")
-    elif ":(" in str:
-        str = str.replace(":(", "🙁")
+        print(str.replace(":)", "🙂"))
+    if ":(" in str:
+        print(str.replace(":(", "🙁"))
     else:
-        str = str
+        print(str)
 
 # call main function
 main()
