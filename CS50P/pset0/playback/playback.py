@@ -1,3 +1,5 @@
 input = input("Input: ")
 
-print(input.join("...")) 
+input =
+
+print(input.)
