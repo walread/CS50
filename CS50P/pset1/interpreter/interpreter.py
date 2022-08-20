@@ -1,1 +1,6 @@
-x, y, z = input("Expression: ").split(" ") 
+x, y, z = input("Expression: ").strip().split(" ")
+
+x = float(x)
+z = float(z)
+
+print()
