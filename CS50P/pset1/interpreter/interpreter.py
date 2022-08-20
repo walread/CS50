@@ -3,4 +3,7 @@ x, y, z = input("Expression: ").strip().split(" ")
 x = float(x)
 z = float(z)
 
-print()
+answer = (x y z)
+
+
+print(round(answer[, 1]))
