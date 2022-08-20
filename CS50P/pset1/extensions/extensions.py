@@ -1,6 +1,6 @@
 file = input("File name: ").lower().strip()
 
-if ".jgp" in file or ".jpeg" in file:
+if ".jpg" in file or ".jpeg" in file:
     print("image/jpeg")
 else:
     print("applicaton/octet-stream")
