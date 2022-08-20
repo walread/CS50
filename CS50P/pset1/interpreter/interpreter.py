@@ -12,4 +12,4 @@ elif y == "*":
 elif y == "/":
     answer = x / z
 
-print("{.2f}".format(answer))
+print(round(answer, 2))
