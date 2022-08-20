@@ -9,8 +9,8 @@ elif ".png" in file:
 elif ".pdf" in file:
     print("application/pdf")
 elif ".txt" in file:
-    print("application/txt")
+    print("text/plain")
 elif ".zip" in file:
     print("application/zip")
 else:
-    print("applicaton/octet-stream")
+    print("application/octet-stream")
