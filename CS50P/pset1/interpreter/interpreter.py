@@ -12,4 +12,4 @@ elif y == "*":
 elif y == "/":
     answer = x / z
 
-print(.2f{answer}))
+print("{.2f}".format(answer))
