@@ -6,4 +6,4 @@ z = float(z)
 answer = (x y z)
 
 
-print(round(answer[, 1]))
+print(answer)
