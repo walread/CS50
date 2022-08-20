@@ -11,6 +11,6 @@ elif ".pdf" in file:
 elif ".txt" in file:
     print("application/txt")
 elif ".zip" in file:
-    print("")
+    print("application/zip")
 else:
     print("applicaton/octet-stream")
