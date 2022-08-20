@@ -1,1 +1,1 @@
-x, y, z = input("Expression: ").split() 
+x, y, z = input("Expression: ").split(" ") 
