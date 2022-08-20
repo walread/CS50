@@ -12,4 +12,4 @@ elif y == "*":
 elif y == "/":
     answer = x / z
 
-print(round(answer, 2))
+print(round(answer, 1))
