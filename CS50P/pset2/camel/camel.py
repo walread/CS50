@@ -1,7 +1,9 @@
-name = input("camelCase: ")
+camel = input("camelCase: ")
 
-for c in name:
+snake = camel[0].lower()
+for c in camel:
     if c.isupper():
-        print(c)
+        snake += "_"
+    snake += c.lower()
 
-print("snake_case:", name.lower())
+print("snake_case:", snake) 
