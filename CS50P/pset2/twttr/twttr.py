@@ -1,7 +1,7 @@
 input = input("Input: ")
 
-for c in input:
-    if c.upper() == "A" or c.upper() == "E" or c.upper() == "I" or c.upper() == "O" or c.upper() == "U":
-        input = input["c"].replace("")
+for i in len(input):
+    if input[i].upper() == "A" or input[i].upper() == "E" or input[i].upper() == "I" or input[i].upper() == "O" or input[i].upper() == "U":
+        input = input[i].replace("")
 
 print("Output:", input)
