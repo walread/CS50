@@ -1,4 +1,7 @@
 name = input("camelCase: ")
 
 for c in name:
-    print(c, end="")
+    if c == 'A':
+        name = name[c]
+
+print("snake_case:", name.lower())
