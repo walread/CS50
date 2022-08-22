@@ -1,3 +1,5 @@
-name = input("camelCase: ").split("A-Z")
+name = input("camelCase: ")
 
-print(name)
+for c in name:
+    if c == 'A-Z'
+        
