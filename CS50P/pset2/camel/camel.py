@@ -1,3 +1,4 @@
 name = input("camelCase: ")
 
-name = name.split('A-Z')
+for c in name:
+    
