@@ -14,7 +14,10 @@ def is_valid(s):
         if s.isalnum():
             if s[0, 1].isalpha:
                 for c in s:
-                    if c.isnum
+                    if c.isdigit():
+                        s, t = s.split(c)
+                        break
+                
             else:
                 return False
         else:
