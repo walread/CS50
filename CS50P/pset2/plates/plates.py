@@ -8,13 +8,7 @@ def main():
 
 def is_valid(s):
 
-    if len(s) != 6:
-        return False
-    else:
-        if s.isalnum():
-            return True
-        else:
-            return False
+    s.isalnum()
 
 
 main()
