@@ -1,5 +1,7 @@
 def main():
     plate = input("Plate: ")
+    e, f = plate.split("w")
+    print(e, f)
     for c in plate:
         if c.isdigit():
             s, t = plate.split(c)
