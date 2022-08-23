@@ -13,8 +13,9 @@ def is_valid(s):
             t = ""
             for c in s:
                 if c.isdigit():
-                    t += c
-            if t.isdigit() or len(t) == 0:
+                    t, u = s.split(c)
+                    break
+            if u.isdigit() or len(u) == 0:
                 return True
         else:
             return False
