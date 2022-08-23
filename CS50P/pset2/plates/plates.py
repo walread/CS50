@@ -10,10 +10,11 @@ def is_valid(s):
 
     if len(s) != 6:
         return False
-    if c.isalnum()
-        
     else:
-        return True
+        if s.isalnum():
+            return True
+        else:
+            return False
 
 
 main()
