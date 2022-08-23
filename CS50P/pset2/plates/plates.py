@@ -3,7 +3,6 @@ def main():
     for c in plate:
         if c.isdigit():
             s, t = plate.split(c)
-            break
     print(s, t)
     if is_valid(plate):
         print("Valid")
