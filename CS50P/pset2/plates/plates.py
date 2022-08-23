@@ -8,11 +8,9 @@ def main():
 
 def is_valid(s):
 
-    if len(s) > 6:
-        return False
-    else:
+    if len(s) <= 6:
         if s[0:1].isalpha():
-            if s.isalnum:
+            if s.isalnum():
                 t = ""
                 for c in s:
                     if c.isdigit():
@@ -23,6 +21,8 @@ def is_valid(s):
                 return True
         else:
             return False
+    else:
+        return False
 
 
 main()
