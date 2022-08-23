@@ -1,14 +1,16 @@
 def main():
     plate = input("Plate: ")
-    if plate is_valid(plate):
+    if is_valid(plate):
         print("Valid")
     else:
         print("Invalid")
 
 
 def is_valid(s):
-    for c in s:
-        if 
+    if len(s) == 6:
+        return True
+    else:
+        return False
 
 
 main()
