@@ -8,7 +8,7 @@ def main():
 
 def is_valid(s):
     for c in s:
-        if c
+        if c.isalpha() 
     if len(s) != 6:
         return False
     else:
