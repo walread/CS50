@@ -17,11 +17,13 @@ def is_valid(s):
                     if c.isdigit():
                         s, t = s.split(c)
                         break
-                
+                if t.isdigit():
+                    return True
             else:
                 return False
         else:
             return False
+    return True
 
 
 main()
