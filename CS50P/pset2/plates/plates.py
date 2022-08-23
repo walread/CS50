@@ -15,9 +15,9 @@ def is_valid(s):
             if s[0:1].isalpha:
                 for c in s:
                     if c.isdigit():
-                        s, t = s.split(c)
+                        t, u = s.split(c)
                         break
-                if t.isdigit():
+                if u.isdigit():
                     return True
             else:
                 return False
