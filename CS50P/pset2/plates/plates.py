@@ -5,9 +5,10 @@ def main():
     else:
         print("Invalid")
 
-# use while true loop to split string
+# use while true loop to split string (while string contains digits, split string)
 # could try to insert space once number is reached to split string without loosing first number
-# break while loop once first number is reached 
+# break while loop once first number is reached
+# use try except to overcome assignment error when spliting 
 
 def is_valid(s):
 
