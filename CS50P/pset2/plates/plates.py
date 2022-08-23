@@ -20,7 +20,7 @@ def is_valid(s):
                 if t.isdigit():
                     return True
             else:
-                return False
+                return True
         else:
             return False
 
