@@ -13,17 +13,13 @@ def is_valid(s):
     else:
         if s.isalnum():
             if s[0:1].isalpha:
-                for c in s:
-                    if c.isdigit():
-                        t, u = s.split(c)
-                        break
-                if u.isdigit():
-                    return True
+                for i in len(s):
+                    if s[i].isdigit():
+                        return True
             else:
                 return False
         else:
             return False
-    return True
 
 
 main()
