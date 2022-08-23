@@ -8,17 +8,12 @@ def main():
 
 def is_valid(s):
 
-    if len(s) <= 6:
+    if len(s) > 6:
         return False
     else:
         if s.isalnum():
-            if s[0, 1].isalpha:
-                for c in s:
-                    if c.isdigit():
-                        s, t = s.split(c)
-                        break
-                if t.isdigit():
-                    return True
+            if s[0:1].isalpha:
+                return True
             else:
                 return False
         else:
