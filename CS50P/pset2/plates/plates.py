@@ -18,16 +18,25 @@ def is_valid(s):
         return False
     elif not s[0:1].isalpha():
         return False
-    c = 0
-    while s[c].digit:
+    for c in s:
         if c.isdigit():
-
             t, u = s.split(c)
             if u.isdigit:
                 return True
             else:
                 return False
     return True
+
+
+
+
+            t = ""
+            for c in s:
+                if c.isdigit():
+                    t, u = s.split(c)
+                    break
+            if u.isdigit() or len:
+                return True
 
 
 main()
