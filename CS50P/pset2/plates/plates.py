@@ -18,11 +18,11 @@ def is_valid(s):
         return False
     elif not s[0:1].isalpha():
         return False
-    for c in len(s):
-        if s[c].isdigit():
-            if s[c] == "0":
+    for i in len(s):
+        if s[i].isdigit():
+            if s[i] == "0":
                 return False
-            t, u = s.split(s[c])
+            t, u = s.split(s[i])
             if not u.isdigit() and len(u) > 0:
                 return False
             else:
