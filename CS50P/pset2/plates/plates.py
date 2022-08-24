@@ -28,15 +28,4 @@ def is_valid(s):
     return True
 
 
-
-
-            t = ""
-            for c in s:
-                if c.isdigit():
-                    t, u = s.split(c)
-                    break
-            if u.isdigit() or len:
-                return True
-
-
 main()
