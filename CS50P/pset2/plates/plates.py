@@ -23,10 +23,14 @@ def is_valid(s):
     elif not s[0:1].isalpha():
         return False
     for c in s:
-        try:
-            if c.isdigit():
+        if c.isdigit():
+            try:
                 t, u = s.split(c)
                 break
+        else:
+            return True
+    if u.isdigit:
+        return
 
 
 
