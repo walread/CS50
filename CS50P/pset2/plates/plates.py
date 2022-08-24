@@ -22,7 +22,8 @@ def is_valid(s):
         return False
     elif not s[0:1].isalpha():
         return False
-    while True
+    for c in s:
+        if c.is
 
 
 
