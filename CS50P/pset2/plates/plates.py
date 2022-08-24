@@ -17,7 +17,7 @@ def is_valid(s):
         if c.isdigit():
             if c == "0":
                 return False
-            t, u = s.split(c)
+            t, u = s.split(c, maxsplit=1)
             if not u.isdigit() and len(u) > 0:
                 return False
             else:
