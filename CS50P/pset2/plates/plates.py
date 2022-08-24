@@ -27,7 +27,7 @@ def is_valid(s):
             if c.isdigit():
                 t, u = s.split(c)
                 break
-        
+
 
 
 
@@ -36,7 +36,7 @@ def is_valid(s):
                 if c.isdigit():
                     t, u = s.split(c)
                     break
-            if u.isdigit() or len(u) == 0:
+            if u.isdigit() or len:
                 return True
 
 
