@@ -20,11 +20,10 @@ def is_valid(s):
             try:
                 t, u = s.split(c)
             except: ValueError
+            if not u.isdigit() and len(u) > 0:
+                return False
             else:
-                if not u.isdigit() and len(u) > 0:
-                    return False
-                else:
-                    break
+                break
     return True
 
 
