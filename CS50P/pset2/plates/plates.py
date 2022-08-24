@@ -23,7 +23,7 @@ def is_valid(s):
     elif not s[0:1].isalpha():
         return False
     for c in s:
-        if c.is
+        if c.isdigit():
 
 
 
