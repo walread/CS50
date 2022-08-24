@@ -18,7 +18,8 @@ def is_valid(s):
         return False
     elif not s[0:1].isalpha():
         return False
-    for c in s:
+    c = 0
+    while s[c].digit:
         if c.isdigit():
 
             t, u = s.split(c)
