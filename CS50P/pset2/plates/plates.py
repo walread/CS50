@@ -5,11 +5,6 @@ def main():
     else:
         print("Invalid")
 
-# use while true loop to split string (while string contains digits, split string)
-# could try to insert space once number is reached to split string without loosing first number
-# break while loop once first number is reached
-# use try, except, else to overcome assignment error when spliting
-
 def is_valid(s):
 
     if len(s) > 6 or len(s) < 2:
@@ -18,15 +13,18 @@ def is_valid(s):
         return False
     elif not s[0:1].isalpha():
         return False
-    for i in range(len(s)):
-        if s[i].isdigit():
-            if s[i] == "0":
+    for c in s:
+        if c.isdigit():
+            if c == "0":
                 return False
-            t, u, v = s.split(s[i])
-            if not u.isdigit() and len(u) > 0:
-                return False
+            try:
+                t, u = s.split(c)
+            except: ValueError
             else:
-                break
+                if not u.isdigit() and len(u) > 0:
+                    return False
+                else:
+                    break
     return True
 
 
