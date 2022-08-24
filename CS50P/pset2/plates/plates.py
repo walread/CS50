@@ -21,10 +21,10 @@ def is_valid(s):
     for c in s:
         if c.isdigit():
             t, u = s.split(c)
-            if u.isdigit:
-                return True
-            else:
+            if not u.isdigit():
                 return False
+            else:
+                break
     return True
 
 
