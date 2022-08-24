@@ -20,6 +20,8 @@ def is_valid(s):
         return False
     for c in s:
         if c.isdigit():
+            if c == "0":
+                return False
             t, u = s.split(c)
             if not u.isdigit() and len(u) > 0:
                 return False
