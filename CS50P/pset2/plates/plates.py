@@ -22,7 +22,7 @@ def is_valid(s):
         if s[i].isdigit():
             if s[i] == "0":
                 return False
-            t, u = s.split(s[i])
+            t, u, v = s.split(s[i])
             if not u.isdigit() and len(u) > 0:
                 return False
             else:
