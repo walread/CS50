@@ -10,8 +10,11 @@ entrees = {
     "Tortilla Salad": 8.00
 }
 
-while True
+while True:
     try:
         item = input("Item: ").title()
+        print()
         if item in entrees:
-            break
+
+    except EOFError:
+        break
