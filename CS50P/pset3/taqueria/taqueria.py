@@ -10,7 +10,8 @@ entrees = {
     "Tortilla Salad": 8.00
 }
 
-try:
-    item = input("Item: ").title() 
-    if item in entrees:
-        break
+while True
+    try:
+        item = input("Item: ").title()
+        if item in entrees:
+            break
