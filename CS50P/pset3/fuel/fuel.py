@@ -3,7 +3,8 @@ while True:
         fraction = input("Fraction: ")
         x, y = fraction.split("/")
         amount = round(int(x) / int(y) * 100)
-        break
+        if amount <= 100:
+            break
     except (ValueError, ZeroDivisionError):
         pass
 
