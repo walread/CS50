@@ -22,4 +22,4 @@ while True:
     except EOFError:
         break
 
-print(f"Total: ${total}")
+print(f"Total: ${round(total, 2)}")
