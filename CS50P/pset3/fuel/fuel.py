@@ -4,7 +4,7 @@ while True:
         x, y = fraction.split("/")
         amount = round(float(x) / float(y) * 100)
         break
-    except ValueError or ZeroDivisionError:
+    except (ValueError, ZeroDivisionError):
         pass
 
 if amount >= 99:
