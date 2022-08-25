@@ -17,12 +17,10 @@ while True:
         item = input("Item: ").title()
         if item in entrees:
             total += entrees[item]
+    except EOFError:
+        break
     except KeyError:
         pass
-    except EOFError:
-        if item in entrees:
-            total += entrees[item]
-        break
 
 total = "{:.2f}".format(total)
 print(f"Total: ${total}")
