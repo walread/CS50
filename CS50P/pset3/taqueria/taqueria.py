@@ -23,4 +23,5 @@ while True:
         pass
 
 total = "{:.2f}".format(total)
+print()
 print(f"Total: ${total}")
