@@ -15,7 +15,6 @@ total = 0
 while True:
     try:
         item = input("Item: ").title()
-        print()
         if item in entrees:
             total += entrees[item]
     except KeyError:
@@ -23,5 +22,4 @@ while True:
     except EOFError:
         break
 
-print("\n")
 print(f"${total}")
