@@ -10,13 +10,18 @@ entrees = {
     "Tortilla Salad": 8.00
 }
 
+total = 0
+
 while True:
     try:
         item = input("Item: ").title()
         print()
         if item in entrees:
-
+            total += entrees[item]
+    except KeyError:
+        pass
     except EOFError:
         break
 
-print("\n") 
+print("\n")
+print(f"${total}")
