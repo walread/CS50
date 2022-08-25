@@ -22,4 +22,4 @@ while True:
     except EOFError:
         break
 
-print(f"${total}")
+print(f"Total: ${total}")
