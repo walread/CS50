@@ -10,4 +10,5 @@ entrees = {
     "Tortilla Salad": 8.00
 }
 
-try
+try:
+    item = input(")
