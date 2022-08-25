@@ -18,7 +18,7 @@ while True:
         if item in entrees:
             cost += entrees[item]
             total = "{:.2f}".format(cost)
-            print(f"Total: ${total}")
+            print("Total: $", "{:.2f}".format(cost))
     except EOFError:
         print()
         break
