@@ -22,5 +22,5 @@ while True:
     except EOFError:
         break
 
-total = "(:.2f)".format(total)
+total = "{:.2f}".format(total)
 print(f"Total: ${total}")
