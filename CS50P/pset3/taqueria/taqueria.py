@@ -11,4 +11,6 @@ entrees = {
 }
 
 try:
-    item = input(")
+    item = input("Item: ").title() 
+    if item in entrees:
+        break
