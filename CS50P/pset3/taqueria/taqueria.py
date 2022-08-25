@@ -18,13 +18,10 @@ while True:
         if item in entrees:
             total += entrees[item]
     except EOFError:
-        if item in entrees:
-            total += entrees[item]
-        print()
         break
     except KeyError:
         pass
 
 total = "{:.2f}".format(total)
-
+print()
 print(f"Total: ${total}")
