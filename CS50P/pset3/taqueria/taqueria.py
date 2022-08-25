@@ -20,7 +20,6 @@ while True:
     except KeyError:
         pass
     except EOFError:
-        item = input("Item: ").title()
         if item in entrees:
             total += entrees[item]
         break
