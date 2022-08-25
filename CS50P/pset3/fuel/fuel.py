@@ -2,7 +2,7 @@ while True:
     try:
         fraction = input("Fraction: ")
         x, y = fraction.split("/")
-        amount = round(float(x) / float(y) * 100)
+        amount = round(int(x) / int(y) * 100)
         break
     except (ValueError, ZeroDivisionError):
         pass
