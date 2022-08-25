@@ -22,4 +22,5 @@ while True:
     except EOFError:
         break
 
-print(f"Total: ${"(:.2f)".format(total)}")
+total = "(:.2f)".format(total)
+print(f"Total: ${total}")
