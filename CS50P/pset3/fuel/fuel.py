@@ -2,9 +2,9 @@ while True:
     try:
         fraction = input("Fraction: ")
         x, y = fraction.split("/")
-        amount = float(x) / float(y) * 100
+        amount = round(float(x) / float(y) * 100)
         break
-    except ValueError, ZeroDivisionError:
+    except ValueError or ZeroDivisionError:
         pass
 
 if amount >= 99:
@@ -12,4 +12,4 @@ if amount >= 99:
 elif amount <= 1:
     print("E")
 else:
-    print(amount) 
+    print(f"{amount}%")
