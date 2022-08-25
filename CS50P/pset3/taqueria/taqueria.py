@@ -18,3 +18,5 @@ while True:
 
     except EOFError:
         break
+
+print("\n") 
