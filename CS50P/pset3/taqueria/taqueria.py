@@ -15,10 +15,10 @@ total = 0
 while True:
     try:
         item = input("Item: ").title()
+        print()
         if item in entrees:
             total += entrees[item]
     except EOFError:
-        print()
         break
     except KeyError:
         pass
