@@ -20,3 +20,7 @@ fruits = {
     "tangerine": "50",
     "watermelon": "80"
 }
+
+item = input("Item: ").lower()
+if item in fruits:
+    print("Calories:", fruits["item"])
