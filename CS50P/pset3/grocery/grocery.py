@@ -13,7 +13,5 @@ while True:
         print()
         break
 
-sorted = sorted(grocery)
-
-for item in sorted:
-    print(f"{sorted[item]} {item}")
+for item in sorted(grocery):
+    print(f"{grocery[item]} {item}")
