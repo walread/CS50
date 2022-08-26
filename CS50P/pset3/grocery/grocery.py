@@ -14,3 +14,4 @@ while True:
         break
 
 for item in grocery:
+    print(f"{grocery[item]} {item}")
