@@ -26,4 +26,4 @@ while True:
     except ValueError:
         pass
 
-print(f"{year}-{month:02}-{day:02}")
+print(f"{year}-{month:}-{day:}")
