@@ -21,7 +21,7 @@ while True:
         elif "," in date:
             month, day, year = date.split(" ")
             day = day.replace(",", "")
-            month = months[month]
+            month = months[month.title()]
         break
     except ValueError:
         pass
