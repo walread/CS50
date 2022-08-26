@@ -1,6 +1,7 @@
 while True:
     try:
-        month, day, year = input("Date: ").split("/" or ",")
+        date = input("Date: ")
+        month, day, year = date.split("/" or "," or " ")
         break
     except ValueError:
         pass
@@ -8,3 +9,6 @@ while True:
 print(month)
 print(day)
 print(year)
+
+
+# might need to do multipule if statements under try before spliting (if "/" in date, then split on "/")
