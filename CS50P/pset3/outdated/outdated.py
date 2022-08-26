@@ -26,6 +26,4 @@ while True:
     except ValueError:
         pass
 
-print(month)
-print(day)
-print(year)
+print(f"{year}-{month:02}-{day:02}")
