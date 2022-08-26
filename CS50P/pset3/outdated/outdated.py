@@ -18,16 +18,15 @@ while True:
         date = input("Date: ")
         if "/" in date:
             month, day, year = date.split("/")
-            month = months[month]
+            month = int(month)
+            day = int(day)
             break
         elif "," in date:
             month, day, year = date.split(" ")
-            day = day.replace(",", "")
-            month = months[month.title()]
+            month = int(months[month.title()])
+            day = int(day.replace(",", ""))
             break
     except (ValueError, KeyError):
         pass
 
-month = int(month)
-day = int(day)
 print(f"{year}-{month:02}-{day:02}")
