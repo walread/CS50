@@ -18,12 +18,13 @@ while True:
         date = input("Date: ")
         if "/" in date:
             month, day, year = date.split("/")
+            month = months[month]
         elif "," in date:
             month, day, year = date.split(" ")
             day = day.replace(",", "")
             month = months[month.title()]
         break
-    except ValueError:
+    except (ValueError, KeyError):
         pass
 
 month = int(month)
