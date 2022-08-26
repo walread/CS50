@@ -19,11 +19,12 @@ while True:
         if "/" in date:
             month, day, year = date.split("/")
             month = months[month]
+            break
         elif "," in date:
             month, day, year = date.split(" ")
             day = day.replace(",", "")
             month = months[month.title()]
-        break
+            break
     except (ValueError, KeyError):
         pass
 
