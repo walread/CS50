@@ -16,18 +16,19 @@ months = {
 while True:
     try:
         date = input("Date: ").strip()
-        if "/" in date:
-            month, day, year = date.split("/")
-            month = int(month)
-            day = int(day)
-        elif "," in date:
-            month, day, year = date.split(" ")
-            month = int(months[month.title()])
-            day = int(day.replace(",", ""))
-        else:
-            
-        if month <= 12 and day <= 31:
-            break
+        if "/" or " " in date:
+            if "/" in date:
+                month, day, year = date.split("/")
+                month = int(month)
+                day = int(day)
+            elif "," in date:
+                month, day, year = date.split(" ")
+                month = int(months[month.title()])
+                day = int(day.replace(",", ""))
+            else:
+
+            if month <= 12 and day <= 31:
+                break
     except (ValueError, KeyError):
         pass
 
