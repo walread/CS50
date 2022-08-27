@@ -25,11 +25,8 @@ while True:
                 month, day, year = date.split(" ")
                 month = int(months[month.title()])
                 day = int(day.replace(",", ""))
-            else:
 
             if month <= 12 and day <= 31:
-                break
-    except (ValueError, KeyError):
+                print(f"{year}-{month:02}-{day:02}")
+    except (KeyError, NameError, ValueError):
         pass
-
-print(f"{year}-{month:02}-{day:02}")
