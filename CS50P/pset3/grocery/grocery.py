@@ -1,6 +1,4 @@
-grocery = {
-
-}
+grocery = {}
 
 while True:
     try:
