@@ -20,10 +20,12 @@ while True:
             month, day, year = date.split("/")
             month = int(month)
             day = int(day)
-        elif "," or " " in date:
+        elif "," in date:
             month, day, year = date.split(" ")
             month = int(months[month.title()])
             day = int(day.replace(",", ""))
+        else:
+            pass 
         if month <= 12 and day <= 31:
             break
     except (ValueError, KeyError):
