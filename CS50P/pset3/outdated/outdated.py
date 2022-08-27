@@ -20,7 +20,7 @@ while True:
             month, day, year = date.split("/")
             month = int(month)
             day = int(day)
-        elif "," in date:
+        elif "," or " " in date:
             month, day, year = date.split(" ")
             month = int(months[month.title()])
             day = int(day.replace(",", ""))
