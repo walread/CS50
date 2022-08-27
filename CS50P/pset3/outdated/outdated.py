@@ -28,5 +28,6 @@ while True:
 
             if month <= 12 and day <= 31:
                 print(f"{year}-{month:02}-{day:02}")
+            break
     except (KeyError, NameError, ValueError):
         pass
