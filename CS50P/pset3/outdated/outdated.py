@@ -25,7 +25,7 @@ while True:
             month = int(months[month.title()])
             day = int(day.replace(",", ""))
         else:
-            pass 
+            ValueError
         if month <= 12 and day <= 31:
             break
     except (ValueError, KeyError):
