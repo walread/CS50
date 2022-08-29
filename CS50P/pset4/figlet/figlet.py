@@ -11,9 +11,10 @@ if len(sys.argv) == 1:
     figlet.setFont(font = f)
     print(figlet.renderText(s))
 elif len(sys.argv) == 3:
+    e = sys.argv[1]
     f = sys.argv[2]
     if f not in font_list:
-        sys.exit("Font not in font list")
+        sys.exit("-f font or --font font")
     else:
         s = input("Input: ")
         figlet.setFont(font = f)
