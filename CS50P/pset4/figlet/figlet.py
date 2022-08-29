@@ -1,9 +1,8 @@
 from pyfiglet import Figlet
 import sys
 
-if len(sys.argv) != 3:
-    sys.exit
-else:
+if len(sys.argv) == 1:
+elif len(sys.argv) == 3:
     f = sys.argv[1]
     s = sys.argv[2]
     figlet = Figlet()
@@ -12,3 +11,5 @@ else:
     else:
         figlet.setFont(font = f)
         print(figlet.renderText(s))
+else:
+    
