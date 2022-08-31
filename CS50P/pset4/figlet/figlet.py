@@ -13,7 +13,7 @@ if len(sys.argv) == 1:
 elif len(sys.argv) == 3:
     e = sys.argv[1]
     f = sys.argv[2]
-    if e != "-f" or e != "--font":
+    if e != "-f":
         sys.exit(e)
     elif f not in font_list:
         sys.exit("Invalid usage")
