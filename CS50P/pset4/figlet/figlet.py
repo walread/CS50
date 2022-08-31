@@ -13,11 +13,13 @@ if len(sys.argv) == 1:
 elif len(sys.argv) == 3:
     e = sys.argv[1]
     f = sys.argv[2]
-    if f not in font_list:
-        sys.exit("-f font_name or --font font_name")
+    if e != "-f" or e != "--font":
+        sys.exit("First argument is -f or --font")
+    elif f not in font_list:
+        sys.exit("Second argument is font_name")
     else:
         s = input("Input: ")
         figlet.setFont(font = f)
         print(figlet.renderText(s))
 else:
-    sys.exit("-f font_name or --font font_name")
+    sys.exit("Zero or two command line arguments")
