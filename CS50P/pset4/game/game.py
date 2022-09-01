@@ -3,5 +3,7 @@ import random
 while True:
     try:
         n = input("Level: ")
-        if n ==
-        level =
+        n = int(n)
+    except ValueError:
+        pass
+    if n 
