@@ -1,9 +1,8 @@
 import random
 
 while True:
-    try:
-        n = input("Level: ")
-        n = int(n)
-    except ValueError:
-        pass
-    if n 
+    n = input("Level: ")
+    if n.isdigit():
+        break
+
+level = random.num
