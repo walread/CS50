@@ -4,7 +4,8 @@ import sys
 while True:
     try:
         n = int(input("Level: "))
-        break
+        if n > 0:
+            break
     except ValueError:
         pass
 
@@ -16,7 +17,9 @@ while True:
         guess = int(input("Guess: "))
     except ValueError:
         pass
-    if guess > level:
+    if guess < 1:
+        pass
+    elif guess > level:
         print("Too large!")
     elif guess < level:
         print("Too small!")
