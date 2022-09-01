@@ -10,3 +10,9 @@ while True:
 
 level = random.randint(1, int(n))
 print(level)
+
+while True:
+    try:
+        guess = int(input("Guess: "))
+    except ValueError:
+        pass
