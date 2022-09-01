@@ -2,7 +2,7 @@ import random
 
 
 def main():
-    get_level()
+    level = get_level()
 
 
 def get_level():
@@ -10,7 +10,7 @@ def get_level():
         try:
             level = int(input("Level: "))
             if level in range(1, 3):
-                break
+                return level
         except ValueError:
             pass
 
