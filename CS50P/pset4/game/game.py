@@ -1,6 +1,7 @@
 import random
 
 while True:
-    n = input("Level: ")
-    if n == 
-    level =
+    try:
+        n = input("Level: ")
+        if n ==
+        level =
