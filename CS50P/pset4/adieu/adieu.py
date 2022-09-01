@@ -8,6 +8,7 @@ while True:
         names += name
     except EOFError:
         break
-        print()
 
-names = p.join(names)
+names = inflect.join(names)
+
+print("Adieu, adieu, to", names)
