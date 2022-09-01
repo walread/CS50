@@ -2,9 +2,9 @@ import random
 
 
 def main():
-    level = get_level()
-    x = generate_integer(level)
-    y = generate_integer(level)
+    n = get_level()
+    x = generate_integer(n)
+    y = generate_integer(n)
     answer = int(input(f"{x} + {y} = "))
     if answer == (x + y):
         print("Correct")
