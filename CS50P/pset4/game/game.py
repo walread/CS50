@@ -5,4 +5,7 @@ while True:
     if n.isdigit():
         break
 
-level = random.num
+level = random.randint(1, int(n))
+
+while True:
+    guess = input()
