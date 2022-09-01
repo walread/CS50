@@ -15,13 +15,13 @@ print(level)
 while True:
     try:
         guess = int(input("Guess: "))
+        if guess < 1:
+            pass
+        elif guess > level:
+            print("Too large!")
+        elif guess < level:
+            print("Too small!")
+        else:
+            sys.exit("Just right!")
     except ValueError:
         pass
-    if guess < 1:
-        pass
-    elif guess > level:
-        print("Too large!")
-    elif guess < level:
-        print("Too small!")
-    else:
-        sys.exit("Just right!")
