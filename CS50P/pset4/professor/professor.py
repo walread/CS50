@@ -3,13 +3,18 @@ import random
 
 def main():
     n = get_level()
-    x = generate_integer(n)
-    y = generate_integer(n)
-    answer = int(input(f"{x} + {y} = "))
-    if answer == (x + y):
-        print("Correct")
-    else:
-        print("EEE")
+    score = 0
+    for i in range(10):
+        x = generate_integer(n)
+        y = generate_integer(n)
+        while True
+        answer = int(input(f"{x} + {y} = "))
+        if answer != (x + y):
+            print("EEE")
+        else:
+            score += 1
+    print(f"{score}/10")
+
 
 
 def get_level():
