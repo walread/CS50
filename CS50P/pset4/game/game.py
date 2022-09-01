@@ -4,8 +4,7 @@ import sys
 while True:
     try:
         n = int(input("Level: "))
-        if n > 0:
-            break
+        break
     except ValueError:
         pass
 
