@@ -3,7 +3,11 @@ import inflect
 names = []
 
 while True:
-    name = input("Name: ")
-    names += name
+    try:
+        name = input("Name: ")
+        names += name
+    except EOFError:
+        break
+        print()
 
-names = p.join(names) 
+names = p.join(names)
