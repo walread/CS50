@@ -1,4 +1,5 @@
 import random
+import sys
 
 while True:
     try:
@@ -14,7 +15,6 @@ print(level)
 while True:
     try:
         guess = int(input("Guess: "))
-        guess > 0
     except ValueError:
         pass
     if guess > level:
@@ -22,4 +22,4 @@ while True:
     elif guess < level:
         print("Too small!")
     else:
-        print("Just right!") 
+        sys.exit("Just right!")
