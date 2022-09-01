@@ -8,4 +8,4 @@ while True:
 level = random.randint(1, int(n))
 
 while True:
-    guess = input()
+    guess = input("Guess: ") 
