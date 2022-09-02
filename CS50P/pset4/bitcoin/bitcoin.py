@@ -11,7 +11,7 @@ else:
 
 try:
     r = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
-    rate = r.json()["bpi"]["USD"]["rate"]
-    print(f"${rate * int(sys.argv[1])}") 
+    rate = r.json()["bpi"]["USD"]["rate_float"]
+    print(f"${rate * float(sys.argv[1])}")
 except requests.RequestException:
     sys.exit("Decoding fail")
