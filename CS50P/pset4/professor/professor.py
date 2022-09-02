@@ -20,7 +20,7 @@ def main():
                     print("EEE")
             else:
                 print(f"{x} + {y} = {x + y}")
-    print(score)
+    print(f"Score: {score}")
 
 
 def get_level():
