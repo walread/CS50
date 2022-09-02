@@ -4,7 +4,7 @@ def main():
 
 
 def shorten(word):
-    vowel = "AEIOUaeiou"
+    vowel = "aeiou"
     for c in vowel:
         word = word.replace(c, "")
     return word
