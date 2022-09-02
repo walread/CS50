@@ -27,7 +27,7 @@ def get_level():
     while True:
         try:
             level = int(input("Level: "))
-            if level in range(1, 3):
+            if level in range(1, 4):
                 return level
         except ValueError:
             pass
