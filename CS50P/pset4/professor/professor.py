@@ -7,14 +7,20 @@ def main():
     for i in range(10):
         x = generate_integer(n)
         y = generate_integer(n)
-        while True
-        answer = int(input(f"{x} + {y} = "))
-        if answer != (x + y):
-            print("EEE")
-        else:
-            score += 1
+        for j in range(4):
+            if j < 3:
+                try:
+                    answer = int(input(f"{x} + {y} = "))
+                    if answer != (x + y):
+                        raise ValueError
+                    else:
+                        score += 1
+                        break
+                except ValueError:
+                    print("EEE")
+            else:
+                print(f"{x} + {y} = {x + y}")
     print(f"{score}/10")
-
 
 
 def get_level():
