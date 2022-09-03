@@ -1,17 +1,13 @@
 def main():
     while True:
-    try:
-        fraction = input("Fraction: ")
-        if convert(fraction) <= 100:
-            break
-    except (ValueError, ZeroDivisionError):
-        pass
-if amount >= 99:
-    print("F")
-elif amount <= 1:
-    print("E")
-else:
-    print(f"{amount}%")
+        try:
+            fraction = input("Fraction: ")
+            percentage = convert(fraction)
+            if percentage <= 100:
+                print(gauge(percentage))
+                break
+        except (ValueError, ZeroDivisionError):
+            pass
 
 
 def convert(fraction):
@@ -20,7 +16,12 @@ def convert(fraction):
 
 
 def gauge(percentage):
-    ...
+    if percentage >= 99:
+        return "F"
+    elif percentage <= 1:
+        return "E"
+    else:
+        return f"{percentage}%"
 
 
 if __name__ == "__main__":
