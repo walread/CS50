@@ -2,12 +2,12 @@ from bank import value
 
 
 def test_hello():
-    assert value("hello, mark") == 0
+    assert value("Hello, Mark") == 0
 
 
 def test_h():
-    assert value("hey, mark") == 20
+    assert value("Hey, Mark") == 20
 
 
 def test_other():
-    assert value("what's up, mark") == 100
+    assert value("What's up, Mark") == 100
