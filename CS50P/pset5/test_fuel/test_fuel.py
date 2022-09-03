@@ -3,7 +3,7 @@ import pytest
 
 def test_convert():
     assert fuel.convert("1/10") == 10
-    with pytest.raises(TypeError):
+    with pytest.raises(ValueError):
         fuel.convert("s/s")
     with pytest.raises(ZeroDivisionError):
         fuel.convert("1/0")
