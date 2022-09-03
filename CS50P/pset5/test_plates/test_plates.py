@@ -13,4 +13,5 @@ def test_numbers():
     assert is_valid("AA02") == False
 
 def test_punct():
-    assert is_valid("A!A. A") == False
+    assert is_valid("AA A") == False
+    assert is_valid("AA.A") == False
