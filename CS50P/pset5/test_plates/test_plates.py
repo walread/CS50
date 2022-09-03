@@ -10,6 +10,7 @@ def test_length():
 
 def test_numbers():
     assert is_valid("AA00AA") == False
+    assert is_valid("AA022") == False
 
 def test_punct():
     assert is_valid("A!A. A") == False
