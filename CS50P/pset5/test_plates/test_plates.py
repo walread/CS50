@@ -2,7 +2,7 @@ from plates import is_valid
 
 
 def test_start():
-    assert is_valid("11AAAA") == False
+    assert is_valid("11") == False
 
 def test_length():
     assert is_valid("A") == False
