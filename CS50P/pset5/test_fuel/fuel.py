@@ -1,20 +1,5 @@
 def main():
-    ...
-
-
-def convert(fraction):
-    ...
-
-
-def gauge(percentage):
-    ...
-
-
-if __name__ == "__main__":
-    main()
-
-
-while True:
+    while True:
     try:
         fraction = input("Fraction: ")
         x, y = fraction.split("/")
@@ -30,3 +15,15 @@ elif amount <= 1:
     print("E")
 else:
     print(f"{amount}%")
+
+
+def convert(fraction):
+    ...
+
+
+def gauge(percentage):
+    ...
+
+
+if __name__ == "__main__":
+    main()
