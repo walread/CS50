@@ -9,7 +9,7 @@ def main():
 def is_valid(s):
     if len(s) > 6 or len(s) < 2:
         return False
-    elif not s.isalnum:
+    elif not s.isalnum():
         return False
     elif not s[0:1].isalpha():
         return False
