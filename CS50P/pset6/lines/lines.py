@@ -11,7 +11,7 @@ except FileNotFoundError:
 
 counter = 0
 for line in lines:
-    if not lines[line].startswith("#"):
+    if line.startswith("#"):
         counter += 1
 
 print(counter)
