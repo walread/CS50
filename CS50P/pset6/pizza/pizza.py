@@ -9,3 +9,4 @@ with open(sys.argv[1]) as file:
         pizzas.append(row)
 
 print(tabulate(pizzas))
+print(pizzas[0])
