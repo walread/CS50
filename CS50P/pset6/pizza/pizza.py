@@ -19,4 +19,4 @@ try:
 except FileNotFoundError:
     sys.exit("File does not exist")
 
-print(tabulate(pizzas, headers="keys", tablefmt="grid"))
+print(tabulate(pizzas, tablefmt="grid"))
