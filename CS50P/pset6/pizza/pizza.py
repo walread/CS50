@@ -1,4 +1,5 @@
-import csv, sys, tabulate
+import csv, sys
+from tabulate import tabulate
 
 pizzas = []
 
