@@ -7,7 +7,7 @@ if len(sys.argv) < 2:
 elif len(sys.argv) > 2:
     sys.exit("Too many command-line arguments")
 name, type = sys.argv[1].split(".")
-if type != "py"
+if type != "py":
     sys.exit("Not a Python file")
 
 try:
