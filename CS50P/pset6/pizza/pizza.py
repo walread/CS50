@@ -14,7 +14,8 @@ if type != "csv":
 try:
     with open(sys.argv[1]) as file:
         reader = csv.DictReader(file)
-    for row in reader:
+        read = csv.reader(file)
+    for row in read:
         pizzas.append(row)
 except FileNotFoundError:
     sys.exit("File does not exist")
