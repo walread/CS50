@@ -15,3 +15,8 @@ elif output_type not in types:
     sys.exit("Invalid output")
 elif input_type != output_type:
     sys.exit("Input and output have different extensions")
+
+try:
+
+except FileNotFoundError:
+    sys.exit("Input does not exist")
