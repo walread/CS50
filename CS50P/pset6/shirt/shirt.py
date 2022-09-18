@@ -28,6 +28,6 @@ except FileNotFoundError:
     sys.exit("Input does not exist")
 
 pasted_photo = sized_photo.paste(shirt)
-saved_photo = pasted_photo.save("after1.jgp")
+shirt.save("after1.jgp")
 
 shirt.close()
