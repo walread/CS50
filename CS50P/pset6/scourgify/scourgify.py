@@ -8,4 +8,9 @@ elif len(sys.argv) < 3:
 try:
     with open(sys.argv[1]) as before:
         reader = csv.DictReader(before)
-        for row in reader:
+        with open(sys.argv[2], "a") as after:
+            writer = csv.DictWriter(after)
+            for row in before:
+except FileNotFoundError:
+    sys.exit(f"Cound not read {sys.argv[1]}")
+    
