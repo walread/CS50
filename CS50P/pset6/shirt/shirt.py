@@ -27,7 +27,7 @@ try:
 except FileNotFoundError:
     sys.exit("Input does not exist")
 
-sized_photo.paste(shirt, )
+sized_photo.paste(shirt, shirt)
 sized_photo.save(sys.argv[2])
 
 shirt.close()
