@@ -1,4 +1,5 @@
 import sys
+from PIL import Image
 
 input_file, input_type = sys.argv[1].lower().split(".")
 output_file, output_type = sys.argv[2].lower().split(".")
