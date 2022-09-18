@@ -16,4 +16,9 @@ try:
 except FileNotFoundError:
     sys.exit(f"Cound not read {sys.argv[1]}")
 
+new_list = []
+
+for row in list:
+    
+
 print(list)
