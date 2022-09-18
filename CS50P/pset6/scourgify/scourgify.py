@@ -10,8 +10,7 @@ list = []
 try:
     with open(sys.argv[1]) as before:
         reader = csv.reader(before)
-        del reader[0]
-        for row in before:
+        for row in reader:
             last, first, house = row.replace('"', "").split(",")
             list.append({"first": first.lstrip(), "last": last, "house": house.replace("/n", "")})
 except FileNotFoundError:
