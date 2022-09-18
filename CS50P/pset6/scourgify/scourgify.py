@@ -9,7 +9,7 @@ list = []
 
 try:
     with open(sys.argv[1]) as before:
-        reader = csv.DictReader(before)
+        reader = csv.reader(before)
         for row in before:
             last, first, house = row.replace('""', "").split(",")
             list.append({"first": first.lstrip(), "last": last, "house": house})
