@@ -26,4 +26,6 @@ try:
 except FileNotFoundError:
     sys.exit("Input does not exist")
 
-close(shirt) 
+
+
+shirt.close()
