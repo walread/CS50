@@ -10,15 +10,11 @@ list = []
 try:
     with open(sys.argv[1]) as before:
         reader = csv.reader(before)
+        del reader[0]
         for row in before:
             last, first, house = row.replace('"', "").split(",")
             list.append({"first": first.lstrip(), "last": last, "house": house.replace("/n", "")})
 except FileNotFoundError:
     sys.exit(f"Cound not read {sys.argv[1]}")
-
-new_list = []
-
-for row in list:
-    
 
 print(list)
