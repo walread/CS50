@@ -1,5 +1,5 @@
 import sys
-from PIL import Image
+from PIL import Image, ImageOps
 
 input_file, input_type = sys.argv[1].lower().split(".")
 output_file, output_type = sys.argv[2].lower().split(".")
@@ -19,9 +19,8 @@ elif input_type != output_type:
 
 with Image.open("shirt.png") as shirt:
     size = shirt.size
-
 try:
     with Image.open(sys.argv[1]) as file:
-        print(size)
+        ImageOps.fit(file, size)
 except FileNotFoundError:
     sys.exit("Input does not exist")
