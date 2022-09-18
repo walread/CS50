@@ -9,7 +9,7 @@ list = []
 
 try:
     with open(sys.argv[1]) as before:
-        reader = csv.DictReader(before)
+        reader = csv.reader(before)
         for row in reader:
             list.append(row)
 except FileNotFoundError:
@@ -18,7 +18,5 @@ except FileNotFoundError:
 del list[0]
 new_list = []
 
-for row in list:
-    last, first, house = row.split(",")
-
-print(list)
+for item in list:
+    print(item)
