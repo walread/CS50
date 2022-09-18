@@ -17,7 +17,7 @@ except FileNotFoundError:
 
 del list[0]
 
-with open(sys.argv[2], "a") as after:
+with open(sys.argv[2], "w") as after:
     writer = csv.DictWriter(after, fieldnames=["first", "last", "house"])
     writer.writeheader()
     for item in list:
