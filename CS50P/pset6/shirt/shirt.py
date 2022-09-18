@@ -18,6 +18,7 @@ elif input_type != output_type:
     sys.exit("Input and output have different extensions")
 
 try:
-
+    Image.open(sys.argv[1]) as file:
+        
 except FileNotFoundError:
     sys.exit("Input does not exist")
