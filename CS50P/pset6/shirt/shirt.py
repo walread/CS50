@@ -21,12 +21,12 @@ shirt = Image.open("shirt.png")
 size = shirt.size
 
 try:
-    with Image.open(sys.argv[1]) as file:
-        sized_file = ImageOps.fit(file, size)
+    with Image.open(sys.argv[1]) as photo:
+        sized_photo = ImageOps.fit(photo, size)
 except FileNotFoundError:
     sys.exit("Input does not exist")
 
-pasted_photo = sized_file.paste(shirt)
+pasted_photo = sized_photo.paste(shirt)
 pasted_photo.save(sys.argv[2])
 
 shirt.close()
