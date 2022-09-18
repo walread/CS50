@@ -19,4 +19,7 @@ del list[0]
 new_list = []
 
 for item in list:
-    print(item[0])
+    last, first = item[0].split(",")
+    new_list.append({"first": first, "last": last, "house": item[1]})
+
+print(new_list)
