@@ -19,6 +19,7 @@ del list[0]
 
 with open(sys.argv[2], "a") as after:
     writer = csv.DictWriter(after, fieldnames=["first", "last", "house"])
+    writer.writeheader()
     for item in list:
         last, first = item[0].split(",")
         writer.writerow({"first": first.lstrip(), "last": last, "house": item[1]})
