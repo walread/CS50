@@ -1,5 +1,6 @@
 import sys
 from PIL import Image, ImageOps
+import PIL
 
 input_file, input_type = sys.argv[1].lower().split(".")
 output_file, output_type = sys.argv[2].lower().split(".")
@@ -27,6 +28,6 @@ except FileNotFoundError:
     sys.exit("Input does not exist")
 
 pasted_photo = sized_photo.paste(shirt)
-pasted_photo.Image.save("after1.jgp")
+saved_photo = pasted_photo.save("after1.jgp")
 
 shirt.close()
