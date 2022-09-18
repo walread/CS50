@@ -21,6 +21,7 @@ shirt = Image.open("shirt.png")
 size = shirt.size
 
 try:
-    Image.open(sys.argv[1]) as file:
+    with Image.open(sys.argv[1]) as file:
+        print(size)
 except FileNotFoundError:
     sys.exit("Input does not exist")
