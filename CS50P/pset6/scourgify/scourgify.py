@@ -11,8 +11,8 @@ try:
     with open(sys.argv[1]) as before:
         reader = csv.reader(before)
         for row in before:
-            last, first, house = row.replace('"', "").replace("/n", "").split(",")
-            list.append({"first": first.lstrip(), "last": last, "house": house})
+            last, first, house = row.replace('"', "").split(",")
+            list.append({"first": first.lstrip(), "last": last, "house": house.replace("/n", "")})
 except FileNotFoundError:
     sys.exit(f"Cound not read {sys.argv[1]}")
 
