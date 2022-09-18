@@ -17,10 +17,13 @@ elif output_type not in types:
 elif input_type != output_type:
     sys.exit("Input and output have different extensions")
 
-with Image.open("shirt.png") as shirt:
-    size = shirt.size
+shirt = Image.open("shirt.png")
+size = shirt.size
+
 try:
     with Image.open(sys.argv[1]) as file:
-        ImageOps.fit(file, size)
+        sized_file = ImageOps.fit(file, size)
 except FileNotFoundError:
     sys.exit("Input does not exist")
+
+close(shirt) 
