@@ -15,4 +15,10 @@ try:
 except FileNotFoundError:
     sys.exit(f"Cound not read {sys.argv[1]}")
 
+del list[0]
+new_list = []
+
+for row in list:
+    last, first, house = row.split(",")
+
 print(list)
