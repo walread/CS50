@@ -11,6 +11,8 @@ try:
     with open(sys.argv[1]) as before:
         reader = csv.DictReader(before)
         for row in before:
-            list.append({"first": row})
+            list.append(row)
 except FileNotFoundError:
     sys.exit(f"Cound not read {sys.argv[1]}")
+
+print(list)
