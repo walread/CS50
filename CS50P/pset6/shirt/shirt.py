@@ -3,7 +3,8 @@ import sys
 input_file, input_type = sys.argv[1].split(".")
 output_file, output_type = sys.argv[2].split(".")
 
-
+print(input_type)
+print(output_type)
 
 if len(sys.argv) > 3:
     sys.exit("Too many command-line arguments")
