@@ -16,11 +16,6 @@ except FileNotFoundError:
     sys.exit(f"Cound not read {sys.argv[1]}")
 
 del list[0]
-new_list = []
-
-for item in list:
-    last, first = item[0].split(",")
-    new_list.append({"first": first.lstrip(), "last": last, "house": item[1]})
 
 with open(sys.argv[2], "a") as after:
     writer = csv.DictWriter(after, fieldnames=["first", "last", "house"])
