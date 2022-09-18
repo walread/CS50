@@ -20,6 +20,9 @@ new_list = []
 
 for item in list:
     last, first = item[0].split(",")
-    new_list.append({"first": first, "last": last, "house": item[1]})
+    new_list.append({"first": first.lstrip(), "last": last, "house": item[1]})
 
-print(new_list)
+with open(sys.argv[2], "a") as after:
+    writer = csv.DictWriter(after)
+    for row in writer:
+        
