@@ -1,7 +1,7 @@
 import sys
 
-input_file, input_type = sys.argv[1].split(".")
-output_file, output_type = sys.argv[2].split(".")
+input_file, input_type = sys.argv[1].lower().split(".")
+output_file, output_type = sys.argv[2].lower().split(".")
 
 types = ["jpg", "jpeg", "png"]
 
