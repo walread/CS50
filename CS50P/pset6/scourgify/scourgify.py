@@ -23,6 +23,5 @@ for item in list:
     new_list.append({"first": first.lstrip(), "last": last, "house": item[1]})
 
 with open(sys.argv[2], "a") as after:
-    writer = csv.DictWriter(after)
-    for row in writer:
-        
+    writer = csv.DictWriter(after, fieldname=["first", "last", "house"])
+    writer.writerow(new_list)
