@@ -19,4 +19,4 @@ del list[0]
 new_list = []
 
 for item in list:
-    print(item)
+    print(item[0])
