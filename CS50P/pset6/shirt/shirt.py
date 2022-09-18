@@ -17,8 +17,10 @@ elif output_type not in types:
 elif input_type != output_type:
     sys.exit("Input and output have different extensions")
 
-try:
-    Image.open("shirt.png") as file:
+shirt = Image.open("shirt.png")
+size = shirt.size
 
+try:
+    Image.open(sys.argv[1]) as file:
 except FileNotFoundError:
     sys.exit("Input does not exist")
