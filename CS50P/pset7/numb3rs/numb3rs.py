@@ -7,8 +7,7 @@ def main():
 
 
 def validate(ip):
-    s = sys.argv[1]
-    print(s)
+    valid = 
 
 
 ...
