@@ -7,7 +7,7 @@ def main():
 
 
 def parse(s):
-    if extract := re.search("", s):
+    if extract := re.search("^https?://(www.)?", s):
         return extract
 
 
