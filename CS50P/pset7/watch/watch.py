@@ -7,7 +7,8 @@ def main():
 
 
 def parse(s):
-    
+    if extract := re.search("", s)
+        return extract
 
 
 if __name__ == "__main__":
