@@ -7,7 +7,7 @@ def main():
 
 
 def parse(s):
-    if extract := re.search("^https?://(www.)?", s):
+    if extract := re.search("^https?://(?:www.)?youtube\.com/embed/([])$", s):
         return extract
 
 
