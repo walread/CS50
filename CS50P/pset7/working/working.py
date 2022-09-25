@@ -7,7 +7,8 @@ def main():
 
 
 def convert(s):
-    ...
+    if matches := re.search(r"", s)
+        return matches.group(1)
 
 
 ...
