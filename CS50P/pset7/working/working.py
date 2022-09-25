@@ -11,11 +11,11 @@ def convert(s):
     if matches == None:
         raise ValueError
     else:
-        match = []
-        for item in matches.groups():
-            if item != None:
-                match.append(item)
-        return match
+        if None in matches.groups():
+            return "Includes none"
+        else:
+            return "Doesn't include none"
+
 
 if __name__ == "__main__":
     main()
