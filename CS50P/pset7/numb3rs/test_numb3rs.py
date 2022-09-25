@@ -9,4 +9,4 @@ def test_valid():
 def test_invalid():
     assert validate("0000.1.2.3") == False
     assert validate("1.2.3.1000") == False
-    assert validate("cat") == False
+
