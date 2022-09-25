@@ -8,10 +8,13 @@ def main():
 
 def convert(s):
     matches = re.search(r"^(1[0-2]|[0-9])(:[0-5][0-9])? (AM|PM) to (1[0-2]|[0-9])(:[0-5][0-9])? (AM|PM)$", s)
-    if None in matches.groups():
+    try:
+        if None in matches.groups():
+            raise ValueError
+        else:
+            return matches.groups()
+    except AttributeError:
         raise ValueError
-    else:
-        return matches.groups()
 
 
 if __name__ == "__main__":
