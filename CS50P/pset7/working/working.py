@@ -12,7 +12,7 @@ def convert(s):
         raise ValueError
     else:
         match = []
-        for item in matches:
+        for item in matches.groups():
             if item != None:
                 match.append(item)
         return match
