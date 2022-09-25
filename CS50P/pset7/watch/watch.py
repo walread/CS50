@@ -7,8 +7,8 @@ def main():
 
 
 def parse(s):
-    if matches := re.search('src="https?://(?:www.)?youtube\.com/embed/()"', s):
-        return matches.group
+    if matches := re.search('src="https?://(?:www\.)?youtube\.com/embed/()"', s):
+        return matches.group(1)
 
 
 if __name__ == "__main__":
