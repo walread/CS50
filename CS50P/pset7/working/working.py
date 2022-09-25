@@ -16,9 +16,9 @@ def convert(s):
         if matches.group(6) == "PM":
             matches.group(4) == int(matches.group(4))+12
         if None in matches.groups():
-            return (f"{matches.group(1):02}:00 to {matches.group(4):02}:00")
+            return (f"{matches.group(1)}:00 to {matches.group(4)}:00")
         else:
-            return (f"{matches.group(1):02}{matches.group(2)} to {matches.group(4):02}{matches.group(4)}")
+            return (f"{matches.group(1)}{matches.group(2)} to {matches.group(4)}{matches.group(5)}")
 
 
 if __name__ == "__main__":
