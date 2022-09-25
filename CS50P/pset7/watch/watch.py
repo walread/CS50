@@ -7,7 +7,7 @@ def main():
 
 
 def parse(s):
-    if extract := re.search("", s)
+    if extract := re.search("", s):
         return extract
 
 
