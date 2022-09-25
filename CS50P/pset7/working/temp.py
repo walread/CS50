@@ -1,1 +1,0 @@
-        return (f"{matches.group(1)}{matches.group(2)} to {matches.group(4)}{matches.group(5)}")
