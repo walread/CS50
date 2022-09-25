@@ -11,7 +11,11 @@ def convert(s):
     if matches == None:
         raise ValueError
     else:
-        return (f"{matches.group(1)}{matches.group(2)} to {matches.group(4)}{matches.group(5)}")
+        match = []
+        for item in matches:
+            if item != None:
+                match.append(item)
+        return match
 
 if __name__ == "__main__":
     main()
