@@ -11,10 +11,14 @@ def convert(s):
     if matches == None:
         raise ValueError
     else:
+        if matches.group(3) == "PM":
+            matches.group(1) == int(matches.group(1))+12
+        if matches.group(6) == "PM":
+            matches.group(4) == int(matches.group(4))+12
         if None in matches.groups():
-            return "Includes none"
+            return (f"{matches.group(1):02}:00 to {matches.group(4):02}:00")
         else:
-            return "Doesn't include none"
+            return (f"{matches.group(1):02}{matches.group(2)} to {matches.group(4):02}{matches.group(4)}")
 
 
 if __name__ == "__main__":
