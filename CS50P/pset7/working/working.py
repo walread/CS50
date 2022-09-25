@@ -11,10 +11,11 @@ def convert(s):
     if matches == None:
         raise ValueError
     else:
+        match = matches.groups()
         if matches.group(3) == "PM":
-            matches.group(1) = int(matches.group(1))+12
+            matches.group(1) == int(matches.group(1))+12
         if matches.group(6) == "PM":
-            matches.group(4) = int(matches.group(4))+12
+            matches.group(4) == int(matches.group(4))+12
         if None in matches.groups():
             return (f"{matches.group(1)}:00 to {matches.group(4)}:00")
         else:
