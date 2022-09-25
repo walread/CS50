@@ -8,7 +8,7 @@ def test_valid():
 
 
 def test_invalid():
+    assert validate("256.255.255.255") == False
 
-    assert validate("64.128.256.512") == False
     assert validate("2001:0db8:85a3:0000:0000:8a2e:0370:7334") == False
     assert validate("cat") == False
