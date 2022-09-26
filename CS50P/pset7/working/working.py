@@ -15,11 +15,11 @@ def convert(s):
         end = int(match.group(4))
         if match.group(3) == "PM" and start != 12:
             start = start+12
-        elif start == 12:
+        elif match.group(3) == "AM" and start == 12:
             start = 0
         if match.group(6) == "PM" and end != 12:
             end = end+12
-        elif end == 12:
+        elif match.group(6) == "AM" and end == 12:
             end = 0
         if None in match.groups():
             return (f"{start:02}:00 to {end:02}:00")
