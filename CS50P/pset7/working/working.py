@@ -18,7 +18,7 @@ def convert(s):
         if match.group(6) == "PM":
             end = int(end)+12
         if None in match.groups():
-            return (f"{start:02}:00 to {end}:00")
+            return (f"{start:02d}:00 to {end}:00")
         else:
             return (f"{start}{match.group(2)} to {end}{match.group(5)}")
 
