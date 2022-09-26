@@ -11,14 +11,16 @@ def convert(s):
     if match == None:
         raise ValueError
     else:
+        start = match.group(1)
+        end = match.group(4)
         if match.group(3) == "PM":
-            start = int(match.group(1))+12
+            start = start+12
         if match.group(6) == "PM":
-            end = int(match.group(4))+12
+            end = end+12
         if None in match.groups():
-            return (f"{match.group(1)}:00 to {match.group(4)}:00")
+            return (f"{start}:00 to {end}:00")
         else:
-            return (f"{match.group(1)}{match.group(2)} to {match.group(4)}{match.group(5)}")
+            return (f"{start}{match.group(2)} to {end}{match.group(5)}")
 
 
 if __name__ == "__main__":
