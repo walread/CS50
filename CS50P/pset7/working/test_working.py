@@ -18,3 +18,5 @@ def test_Error():
         convert("9 AM - 5 PM")
     with raises(ValueError):
         convert("09:00 AM - 17:00 PM")
+    with raises(ValueError):
+        convert("9AM to 5PM")
