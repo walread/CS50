@@ -17,7 +17,7 @@ def convert(s):
             start = start+12
         elif start == 12:
             start = 0
-        if match.group(6) == "PM" and start != 12:
+        if match.group(6) == "PM" and end != 12:
             end = end+12
         elif end == 12:
             end = 0
