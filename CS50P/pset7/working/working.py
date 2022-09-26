@@ -14,9 +14,9 @@ def convert(s):
         start = match.group(1)
         end = match.group(4)
         if match.group(3) == "PM":
-            start = start+12
+            start = int(start)+12
         if match.group(6) == "PM":
-            end = end+12
+            end = int(end)+12
         if None in match.groups():
             return (f"{start}:00 to {end}:00")
         else:
