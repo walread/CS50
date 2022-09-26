@@ -13,6 +13,7 @@ def convert(s):
     else:
         start = int(match.group(1))
         end = int(match.group(4))
+        
         if match.group(3) == "PM":
             start = start+12
         if match.group(6) == "PM":
