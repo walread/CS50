@@ -1,4 +1,5 @@
 from working import convert
+from pytest import raises
 
 def test_hour():
     assert convert("9 AM to 5 PM") == "09:00 to 17:00"
@@ -11,6 +12,6 @@ def test_minute():
 
 
 def test_Error():
-    assert convert("9:60 AM to 5:60 PM") == raise ValueError
-    assert convert("9 AM - 5 PM") == ValueError
-    assert convert("09:00 AM - 17:00 PM") == ValueError
+    assert convert("9:60 AM to 5:60 PM") == raises(ValueError)
+    assert convert("9 AM - 5 PM") == raises(ValueError)
+    assert convert("09:00 AM - 17:00 PM") == raises(ValueError)
