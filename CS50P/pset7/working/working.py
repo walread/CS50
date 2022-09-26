@@ -7,18 +7,18 @@ def main():
 
 
 def convert(s):
-    matches = re.search(r"^(1[0-2]|[0-9])(:[0-5][0-9])? (AM|PM) to (1[0-2]|[0-9])(:[0-5][0-9])? (AM|PM)$", s)
-    if matches == None:
+    match = re.search(r"^(1[0-2]|[0-9])(:[0-5][0-9])? (AM|PM) to (1[0-2]|[0-9])(:[0-5][0-9])? (AM|PM)$", s)
+    if match == None:
         raise ValueError
     else:
-        if matches.group(3) == "PM":
-            matches.group(1) == int(matches.group(1))+12
-        if matches.group(6) == "PM":
-            matches.group(4) == int(matches.group(4))+12
-        if None in matches.groups():
-            return (f"{matches.group(1)}:00 to {matches.group(4)}:00")
+        if match.group(3) == "PM":
+            match.group(1) == int(match.group(1))+12
+        if match.group(6) == "PM":
+            match.group(4) == int(match.group(4))+12
+        if None in match.groups():
+            return (f"{match.group(1)}:00 to {match.group(4)}:00")
         else:
-            return (f"{matches.group(1)}{matches.group(2)} to {matches.group(4)}{matches.group(5)}")
+            return (f"{match.group(1)}{match.group(2)} to {match.group(4)}{match.group(5)}")
 
 
 if __name__ == "__main__":
