@@ -7,7 +7,7 @@ def main():
 
 
 def count(s):
-    if match := re.findall(r"( um )", s.lower()):
+    if match := re.findall(r"( um )?", s.lower()):
         return len(match.groups())
 
 
