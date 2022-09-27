@@ -7,8 +7,8 @@ def main():
 
 
 def count(s):
-    if match := re.findall(r"( um )?", s.lower()):
-        return len(match.groups())
+    if match := re.findall(r"\Wum\W", s.lower()):
+        return len(match)
 
 
 if __name__ == "__main__":
