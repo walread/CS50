@@ -8,4 +8,4 @@ def test_space():
 
 
 def test_case():
-    assert count("Um, thanks for the album.") == 1
+    assert count("UM") == 1
