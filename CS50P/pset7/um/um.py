@@ -7,7 +7,7 @@ def main():
 
 
 def count(s):
-    if match := re.findall(r"(?![a-z])um(?![a-z])", s.lower()):
+    if match := re.findall(r"[^a-z]um[^a-z]", s.lower()):
         return len(match)
 
 
