@@ -7,7 +7,7 @@ def main():
 
 
 def count(s):
-    if match := re.search(r"")
+    if match := re.search(r"", s.lower())
 
 
 if __name__ == "__main__":
