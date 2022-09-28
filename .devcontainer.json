@@ -143,6 +143,7 @@
     },
     "workbench.editor.closeOnFileDelete": true,
     "workbench.editor.untitled.hint": "hidden",
+    "workbench.iconTheme": "vs-minimal",
     "workbench.preferredDarkColorTheme": "GitHub Dark Default",
     "workbench.preferredLightColorTheme": "GitHub Light Default",
     "workbench.startupEditor": "none",
