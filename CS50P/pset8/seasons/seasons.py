@@ -7,8 +7,8 @@ def main():
         birth = date.fromisoformat(input("Date of Birth: "))
     except ValueError:
         sys.exit("Invalid date")
-    time = (date.today() - birth)
-    print(time*24*60)
+    time = (date.today() - birth)*24*60
+    print(time.ctime())
 
 if __name__ == "__main__":
     main()
