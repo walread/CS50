@@ -8,7 +8,7 @@ def main():
         birth = date.fromisoformat(input("Date of Birth: "))
     except ValueError:
         sys.exit("Invalid date")
-    time = (date.today() - birth).seconds()
+    time = int((date.today() - birth).total_seconds()/60)
     print(time)
 
 if __name__ == "__main__":
