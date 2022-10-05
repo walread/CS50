@@ -10,7 +10,8 @@ def main():
     except ValueError:
         sys.exit("Invalid date")
     time = int((date.today() - birth).total_seconds()/60)
-    print(f"{p.number_to_words(time).replace(" and", ""))} minutes")
+    word_time = p.number_to_words(time).replace(" and", "")
+    print(f"{word_time} minutes")
 
 if __name__ == "__main__":
     main()
