@@ -7,7 +7,8 @@ def main():
         birth = date.fromisoformat(input("Date of Birth: "))
     except ValueError:
         sys.exit("Invalid date")
-    print(birth)
+    today = date.today()
+    print(birth, today)
 
 if __name__ == "__main__":
     main()
