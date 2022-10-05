@@ -3,8 +3,11 @@ import sys
 
 
 def main():
-    birth = input("Date of Birth: ")
-    print birth
+    try:
+        birth = input("Date of Birth: ")
+        print(birth)
+    except ValueError:
+        sys.exit("Invalid date")
 
 if __name__ == "__main__":
     main()
