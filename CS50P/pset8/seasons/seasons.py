@@ -1,5 +1,6 @@
 from datetime import date
 import inflect
+
 import sys
 
 
@@ -9,7 +10,7 @@ def main():
     except ValueError:
         sys.exit("Invalid date")
     time = int((date.today() - birth).total_seconds()/60)
-    print(time)
+    print(p.number_to_words(time))
 
 if __name__ == "__main__":
     main()
