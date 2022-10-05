@@ -1,4 +1,4 @@
-from datetime import date, timedelta
+from datetime import date
 import sys
 
 
@@ -8,7 +8,7 @@ def main():
     except ValueError:
         sys.exit("Invalid date")
     time = (date.today() - birth)
-    print(time.total_seconds()/60)
+    print(time*24*60)
 
 if __name__ == "__main__":
     main()
