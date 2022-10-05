@@ -3,8 +3,8 @@ import sys
 
 
 def main():
-    birth = 
-
+    birth = date(input("Date of Birth: "))
+    print(birth) 
 
 if __name__ == "__main__":
     main()
