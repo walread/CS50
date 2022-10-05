@@ -3,7 +3,7 @@ import sys
 
 
 def main():
-    ...
+    birth = 
 
 
 if __name__ == "__main__":
