@@ -4,8 +4,7 @@ import sys
 
 def main():
     try:
-        birth = input("Date of Birth: ")
-        print(birth)
+        birth = date(input("Date of Birth: ").split("-"))
     except ValueError:
         sys.exit("Invalid date")
 
