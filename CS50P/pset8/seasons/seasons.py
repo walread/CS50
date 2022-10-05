@@ -8,7 +8,7 @@ def main():
     except ValueError:
         sys.exit("Invalid date")
     time = (date.today() - birth)*24*60
-    print(time.strftime())
+    print(date(time).strftime())
 
 if __name__ == "__main__":
     main()
