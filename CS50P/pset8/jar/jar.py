@@ -1,5 +1,5 @@
 class Jar:
-    def __init__(self, size, capacity=12):
+    def __init__(self, capacity=12):
         if capacity < 0:
             raise ValueError("Capacity must be a non-nagative int")
         self._capacity = capacity
@@ -21,6 +21,9 @@ class Jar:
     @property
     def size(self):
         return self._size
+
+    @classmethod
+    def get(cls)
 
 
 def main():
