@@ -23,7 +23,8 @@ class Jar:
 
 
 def main():
-    size =
+    jar = Jar()
+    print
 
 if __name__ == "__main__":
     main()
