@@ -1,7 +1,8 @@
 from datetime import date
-import inflect
-p = inflect.engine()
 import sys
+import inflect
+
+p = inflect.engine()
 
 
 def main():
