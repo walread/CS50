@@ -5,8 +5,7 @@ class Jar:
         self.capacity = capacity
 
     def __str__(self):
-        for _ in self.size:
-            return "🍪"*3
+        return "🍪"*self.n
 
     def deposit(self, n):
         ...
@@ -16,11 +15,11 @@ class Jar:
 
     @property
     def capacity(self):
-        
+        ...
 
     @property
     def size(self):
-        self.size = 3
+        self.n = 3
 
 
 def main():
