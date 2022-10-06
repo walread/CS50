@@ -15,15 +15,15 @@ class Jar:
 
     @property
     def capacity(self):
-        ...
+        return self._capacity
 
     @property
     def size(self):
-        self.n = 3
+        return self._size
 
 
 def main():
-    size = 
+    size =
 
 if __name__ == "__main__":
     main()
