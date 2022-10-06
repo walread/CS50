@@ -12,7 +12,7 @@ def main():
         sys.exit("Invalid date")
     today = date.today()
     time = int((today - birth).total_seconds()/60)
-    word_time = p.number_to_words(time).replace(" and", "")
+    word_time = p.number_to_words(time).replace(" and", "").capitalize()
     print(f"{word_time} minutes")
 
 if __name__ == "__main__":
