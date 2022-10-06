@@ -9,10 +9,10 @@ def main():
         birth = date.fromisoformat(input("Date of Birth: "))
     except ValueError:
         sys.exit("Invalid date")
-    today = date.fromisoformat("2000-01-01")
-    time = int(today - birth).total_seconds()/60
-    words = p.number_to_words(time).replace(" and", "")
-    print(f"{words} minutes")
+    today = date.today()
+    time = int((today - birth).total_seconds()/60)
+    word_time = p.number_to_words(time).replace(" and", "")
+    print(f"{word_time} minutes")
 
 if __name__ == "__main__":
     main()
