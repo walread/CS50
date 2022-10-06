@@ -20,11 +20,11 @@ class Jar:
 
     @property
     def size(self):
-        ...
+        self.size = 3
 
 
 def main():
-
+    ...
 
 if __name__ == "__main__":
     main()
