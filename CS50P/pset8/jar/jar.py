@@ -6,7 +6,7 @@ class Jar:
 
     def __str__(self):
         for _ in self.size:
-            return f"🍪{"
+            return "🍪"*3
 
     def deposit(self, n):
         ...
@@ -24,7 +24,8 @@ class Jar:
 
 
 def main():
-    ...
+    jar = Jar()
+    print(jar)
 
 if __name__ == "__main__":
     main()
