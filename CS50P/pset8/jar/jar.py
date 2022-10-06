@@ -6,7 +6,7 @@ class Jar:
 
     def __str__(self):
         for _ in self.size:
-            print("🍪")
+            return f"🍪{"
 
     def deposit(self, n):
         ...
