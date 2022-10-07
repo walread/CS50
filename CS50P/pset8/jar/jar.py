@@ -23,4 +23,5 @@ class Jar:
 
     @property
     def size(self):
+        self.size = 0
         return self.size
