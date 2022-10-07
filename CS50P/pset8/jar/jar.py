@@ -24,13 +24,3 @@ class Jar:
     @property
     def size(self):
         return self.size
-
-
-def main():
-    jar = Jar()
-    jar.deposit(input("Deposit: "))
-    jar.withdraw(input("Withdraw: "))
-    print(jar.size)
-
-    if __name__ == "__main__":
-        main()
