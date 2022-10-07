@@ -1,4 +1,5 @@
 from jar import Jar
+from pytest import raises
 
 
 def test_init():
@@ -18,9 +19,14 @@ def test_deposit():
     jar = Jar()
     jar.deposit(3)
     assert jar.size == 3
-    jar.deposit(10)
-    
+    with raises(ValueError):
+        jar.deposit(10)
 
 
 def test_withdraw():
-    ...
+    jar = Jar()
+    jar.deposit(5)
+    jar.withdraw(2)
+    assert jar.size == 3
+    with raises(ValueError):
+        jar.withdraw(4)
