@@ -5,7 +5,7 @@ class Jar:
             raise ValueError("Capacity must be a non-nagative int")
 
     def __str__(self):
-        return "🍪"*self.n
+        return "🍪"*self.size
 
     def deposit(self, n):
         self.size += n
