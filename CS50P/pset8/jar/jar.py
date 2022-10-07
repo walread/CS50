@@ -28,5 +28,5 @@ def main():
     jar.withdraw(input("Withdraw: "))
     print(jar.size)
 
-if __name__ == "__main__":
-    main()
+    if __name__ == "__main__":
+        main()
