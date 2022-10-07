@@ -29,8 +29,8 @@ class Jar:
 
 def main():
     jar = Jar()
-    jar.deposit(10)
-    jar.withdraw(1)
+    jar.deposit(6)
+    jar.withdraw(5)
     print(jar)
 
 
