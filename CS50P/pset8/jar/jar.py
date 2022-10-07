@@ -30,7 +30,7 @@ class Jar:
 def main():
     jar = Jar()
     jar.deposit(10)
-    jar.withdraw(7)
+    jar.withdraw(1)
     print(jar)
 
 
