@@ -9,9 +9,13 @@ class Jar:
 
     def deposit(self, n):
         self.size += n
+        if self.size > self.capacity:
+            raise ValueError
 
     def withdraw(self, n):
         self.size -= n
+        if self.size < 0:
+            raise ValueError
 
     @property
     def capacity(self):
@@ -20,13 +24,3 @@ class Jar:
     @property
     def size(self):
         return self.size
-
-
-def main():
-    jar = Jar()
-    jar.deposit(input("Deposit: "))
-    jar.withdraw(input("Withdraw: "))
-    print(jar.size)
-
-    if __name__ == "__main__":
-        main()
