@@ -3,7 +3,6 @@ class Jar:
         if capacity < 0:
             raise ValueError("Capacity must be a non-nagative int")
         self._capacity = capacity
-        self._size = size
 
     def __str__(self):
         return "🍪"*self.n
@@ -23,7 +22,8 @@ class Jar:
         return self._size
 
     @classmethod
-    def get(cls)
+    def get(cls):
+        size =
 
 
 def main():
