@@ -23,7 +23,9 @@ class Jar:
 
 
 def main():
-    jar = Jar(10, 3)
+    jar = Jar()
+    jar.deposit(input("Deposit: "))
+    jar.withdraw(input("Withdraw: "))
     print(jar.size)
 
 if __name__ == "__main__":
